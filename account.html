@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Account</title>
+    <meta name="description"
+        content="Redefine your brand’s digital presence with MR.ST Agency. We offer SEO, link building, full stack development, UI/UX, and video editing services.">
+    <meta name="keywords"
+        content="Digital Excellence, Modern Brands, SEO Services, Full Stack Development, UI/UX Design, Video Editing, Cyber Security">
+    <meta name="author" content="MR.ST Agency">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/logo.PNG" class="h-5">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-start py-10 relative">
+
+  <!-- Background Image -->
+  <div class="absolute inset-0 z-0">
+    <img src="assets/hom.jpg" alt="Background" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-black/80"></div> <!-- Dark overlay with low opacity -->
+  </div>
+
+  <!-- User Account Card -->
+  <div
+    class="bg-gray-700/5 backdrop-blur-sm rounded-2xl shadow-2xl shadow-[#0f0f0f] p-6 w-full max-w-md flex flex-col items-center relative z-10">
+
+    <!-- Profile Display -->
+    <div id="profileDpContainer" class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-[#4cc9f0]">
+      <img id="currentDp" src="assets/user.jpg" alt="Profile Picture" class="w-full h-full object-cover">
+    </div>
+
+    <!-- User Name -->
+    <h2 id="userName" class="text-xl font-semibold mb-4 text-white">User Name</h2>
+
+    <!-- File Upload Section -->
+    <div class="mb-0 w-full flex flex-col items-center">
+      <!-- Hidden input -->
+      <input type="file" id="uploadDp" class="hidden">
+
+      <!-- Custom button -->
+      <label for="uploadDp"
+        class="cursor-pointer bg-gradient-to-br from-[#4cc9f0] via-[#4cc9f0] to-[#4cc9f0] hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-[#4cc9f0] dark:focus:ring-[#4cc9f0] font-medium rounded-full py-2 px-5 text-center cursor-pointer whitespace-nowrap transition hover:translate-y-1 duration-[200ms] shadow-2xl shadow-[#4cc9f0]">
+        Change Profile Picture
+      </label>
+
+      <!-- Selected file name -->
+      <p id="fileName" class="mt-2 text-sm text-gray-500"></p>
+    </div>
+
+    <!-- Logout / Web Button -->
+    <div class="flex gap-4 mt-6">
+      <button id="logoutBtn"
+        class="bg-[#4cc9f0] hover:bg-[#32829b] text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-200">
+        Logout
+      </button>
+      <button id="webBtn"
+        class="bg-white hover:bg-gray-200 text-[#4cc9f0] font-semibold py-2 px-4 rounded-lg shadow-md transition duration-200"><a href="index.html">Go to Web</a>
+      </button>
+    </div>
+  </div>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    // -----------------------
+    // User & Login Logic
+    // -----------------------
+    const currentDp = document.getElementById("currentDp");
+    const userName = document.getElementById("userName");
+    const logoutBtn = document.getElementById("logoutBtn");
+    const fileInput = document.getElementById("uploadDp");
+    const userIcon = document.getElementById("floatingUserIcon");
+
+    // Get localStorage data
+    let storedUser = localStorage.getItem("user");
+    let user = storedUser ? JSON.parse(storedUser) : null;
+    let loggedIn = localStorage.getItem("loggedIn") === "true" && user !== null;
+    let signedUp = localStorage.getItem("userSignedUp") === "true";
+
+    const currentPage = window.location.pathname.split("/").pop();
+
+    // -----------------------
+    // Page Redirect Logic
+    // -----------------------
+    if (!loggedIn) {
+        if (!signedUp) {
+            // Never signed up → go register
+            if (currentPage !== "register.html") window.location.href = "register.html";
+        } else {
+            // Signed up but not logged in → go login
+            if (currentPage !== "login.html") window.location.href = "login.html";
+        }
+    } else {
+        // Logged in → redirect away from login/register if needed
+        if (currentPage === "login.html" || currentPage === "register.html") {
+            window.location.href = "account.html";
+        }
+    }
+
+    // -----------------------
+    // Display Username & DP
+    // -----------------------
+    if (loggedIn && user) {
+        if (userName) userName.textContent = user.username || "User Name";
+        if (currentDp && user.dp) currentDp.src = user.dp;
+    }
+
+    // -----------------------
+    // DP Click → Account
+    // -----------------------
+    if (currentDp) {
+        currentDp.addEventListener("click", function () {
+            if (loggedIn && currentPage !== "account.html") {
+                window.location.href = "account.html";
+            }
+        });
+    }
+
+    // -----------------------
+    // Floating User Icon Click
+    // -----------------------
+    if (userIcon) {
+        userIcon.addEventListener("click", function (e) {
+            e.preventDefault();
+            if (loggedIn) {
+                window.location.href = "account.html";
+            } else if (signedUp) {
+                window.location.href = "login.html";
+            } else {
+                window.location.href = "register.html";
+            }
+        });
+    }
+
+    // -----------------------
+    // Logout
+    // -----------------------
+    if (logoutBtn) {
+        logoutBtn.addEventListener("click", function () {
+            localStorage.removeItem("loggedIn");
+            localStorage.removeItem("user");
+            window.location.href = "login.html";
+        });
+    }
+
+    // -----------------------
+    // DP Upload
+    // -----------------------
+    if (fileInput) {
+        fileInput.addEventListener("change", function () {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    if (currentDp) currentDp.src = e.target.result;
+                    user.dp = e.target.result;
+                    localStorage.setItem("user", JSON.stringify(user));
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    }
+
+    // -----------------------
+    // Dropdowns (Desktop Hover & Mobile Click)
+    // -----------------------
+    function closeAllDropdowns() {
+        document.querySelectorAll("ul[id$='Menu']").forEach(menu => menu.classList.add("hidden"));
+        document.querySelectorAll("svg[id$='Icon']").forEach(icon => icon.style.transform = "rotate(0deg)");
+    }
+
+    function setupHover(menuId, iconId, triggerId, parentMenuId = null) {
+        let trigger = document.getElementById(triggerId);
+        let menu = document.getElementById(menuId);
+        let icon = document.getElementById(iconId);
+        let parentMenu = parentMenuId ? document.getElementById(parentMenuId) : null;
+
+        function openMenu() {
+            if (!parentMenu) closeAllDropdowns();
+            menu.classList.remove("hidden");
+            icon.style.transform = "rotate(90deg)";
+        }
+
+        trigger.addEventListener("mouseenter", openMenu);
+        menu.addEventListener("mouseenter", openMenu);
+        trigger.addEventListener("mouseleave", () => { if (!parentMenu) menu.classList.add("hidden"); icon.style.transform = "rotate(0deg)"; });
+        menu.addEventListener("mouseleave", () => { if (!parentMenu) menu.classList.add("hidden"); icon.style.transform = "rotate(0deg)"; });
+    }
+
+    function toggleDropdown(menuId, iconId, event) {
+        event.stopPropagation();
+        let menu = document.getElementById(menuId);
+        let icon = document.getElementById(iconId);
+
+        if (menu.classList.contains("hidden")) {
+            menu.classList.remove("hidden");
+            icon.style.transform = "rotate(90deg)";
+        } else {
+            menu.classList.add("hidden");
+            icon.style.transform = "rotate(0deg)";
+        }
+    }
+
+    document.addEventListener("click", function(e) {
+        if (!e.target.closest("li") && !e.target.closest("button")) {
+            closeAllDropdowns();
+        }
+    });
+
+    // Initialize desktop hover menus
+    window.onload = function () {
+        setupHover("servicesMenu", "servicesIcon", "servicesTrigger");
+        setupHover("teamMenu", "teamIcon", "teamTrigger");
+        setupHover("subTeamMenu", "subTeamIcon", "subTeamTrigger", "teamMenu");
+    };
+});
+
+</script>
+</body>
+
+</html>

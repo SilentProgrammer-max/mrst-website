@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* margin for review cards */
+.glide__slide {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* placehodler color */
+    input::placeholder,
+    textarea::placeholder {
+        color: white;
+    }
+
+/* arrow */
+.safe-bottom {
+  bottom: env(safe-area-inset-bottom, 1.5rem);
+}
+
+#scrollBtn {
+  position: fixed;
+  bottom: 20px;
+  /* desktop, tablet, mobile sab pe same */
+  left: 20px;
+  z-index: 9999;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  color: #fff; /* default text color */
+  text-decoration: none;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* underline thoda neeche */
+  width: 100%;
+  height: 2px;
+  background-color: #4cc9f0;
+  transform: scaleX(0);
+  transform-origin: left; /* start from left */
+  transition: transform 0.6s ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1); /* full underline */
+}
+.swiper-pagination {
+  position: relative !important;
+  /* fixed top se hata do */
+  margin-top: 20px;
+  /* neeche lani ke liye */
+}
+
+.swiper-pagination-bullet {
+  background: #4cc9f0 !important;
+  opacity: 0.4;
+  /* halka */
+}
+
+.swiper-pagination-bullet-active {
+  background: #4cc9f0 !important;
+  opacity: 1;
+  /* active full green */
+}
+
+.team-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  /* pura image dikhayegi, cut nahi hogi */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 40px !important;
+  /* circle size */
+  height: 40px !important;
+  border-radius: 100% !important;
+  /* circle shape */
+  background-color: #4cc9f0;
+  /* green circle */
+  color: #fff !important;
+  /* arrow white */
+  font-size: 16px;
+  /* arrow size */
+}
+
+.swiper-button-next,
+.swiper-button-prev:hover {
+  background-color: #4cc9f0 !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px !important;
+  /* arrow ka size control */
+}
+
+@media (max-width: 768px) {
+  #scrollBtn {
+    bottom: 20px;
+    /* ✅ mobile pe thoda upar */
+  }
+}
+
+@keyframes slow-bounce {
+
+  0%,
+  100% {
+    transform: translateY(-10%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-bounce-slow {
+  animation: slow-bounce 2s infinite;
+}
+
+/* Default inactive dots */
+[data-glide-el="controls[nav]"] button {
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  /* fully round */
+  border: 1px solid #4cc9f0;
+  /* thin green border */
+  background-color: white;
+  /* center white */
+  margin: 0 4px;
+  transition: none !important;
+}
+
+/* Active dot (filled green) */
+[data-glide-el="controls[nav]"] button.glide__bullet--active {
+  background-color: #4cc9f0;
+  border-color: #4cc9f0;
+}

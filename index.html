@@ -1,0 +1,2260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MR.ST | Redefining Digital Excellence for Modern Brands</title>
+    <meta name="description"
+        content="Redefine your brand’s digital presence with MR.ST Agency. We offer SEO, link building, full stack development, UI/UX, and video editing services.">
+    <meta name="keywords"
+        content="Digital Excellence, Modern Brands, SEO Services, Full Stack Development, UI/UX Design, Video Editing, Cyber Security">
+    <meta name="author" content="MR.ST Agency">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/logo.PNG" class="h-5">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body class="bg-[#111111] text-black transition-colors duration-500">
+    <!-- Background image -->
+    <div class="absolute inset-0 bg-cover bg-center h-full" style="background-image: url('assets/hom.jpg');">
+    </div>
+
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black opacity-80 h-full"></div>
+
+    <!-- Navbar -->
+    <div id="navbar"
+        class="w-full py-3 flex items-center justify-between z-10 sm:justify-between lg:justify-between lg:px-10 2xl:px-20 px-5 relative lg:sticky top-0 bg-transparent transition-all duration-300 mr-auto">
+        <!-- Left Logo -->
+        <div class="flex">
+            <img src="assets/logo.PNG" alt="Mr.St Logo" class="lg:h-14  h-14 ml-0 ">
+            <span class="text-4xl font-bold -ml-3 mt-3 text-white">.ST</span>
+        </div>
+
+        <!-- Hamburger Icon (Mobile) -->
+        <button id="menuBtn" class="block lg:hidden relative w-7 h-7">
+            <!-- Hamburger -->
+            <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                class="absolute top-0 left-0 w-7 h-7 text-white transition-all duration-300 ease">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+
+            <!-- Cross -->
+            <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                class="absolute top-0 left-0 w-7 h-7 text-white hidden transition-all duration-300 ease">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden lg:flex gap-6 items-center text-white">
+            <ul class="flex gap-6 items-center text-white">
+
+                <li><a href="#home"
+                        class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Home</a>
+                </li>
+                <li><a href="#about"
+                        class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">About</a>
+                </li>
+
+                <!-- Services -->
+                <li class="relative" id="servicesTrigger">
+                    <a href="javascript:void(0)"
+                        class="flex items-center gap-1 nav-link hover:text-[#4cc9f0] transition-all duration-[100ms] ease">
+                        Services
+                        <svg id="servicesIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="2" stroke="currentColor" class="w-4 h-4 transition-transform">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </a>
+                    <ul id="servicesMenu"
+                        class="absolute -left-40 mt-2 hidden border border-gray-700 rounded-xl shadow-md p-5 w-[250px] space-y-2 bg-white/5 backdrop-blur">
+                        <li><a href="#onpage" class="nav-link hover:text-[#4cc9f0]">Full SEO Optimization</a></li>
+                        <li><a href="#datascience" class="nav-link hover:text-[#4cc9f0]">Data Science</a></li>
+                        <li><a href="#cybersecurity" class="nav-link hover:text-[#4cc9f0]">Cyber Security</a></li>
+                        <li><a href="#fullstackdevelopment" class="nav-link hover:text-[#4cc9f0]">Full Stack
+                                Development</a></li>
+                        <li><a href="#uiux" class="nav-link hover:text-[#4cc9f0]">UI/UX Designing</a></li>
+                        <li><a href="#videoediting" class="nav-link hover:text-[#4cc9f0]">Video Editing</a></li>
+                    </ul>
+                </li>
+
+                <!-- Team -->
+                <li class="relative" id="teamTrigger">
+                    <a href="javascript:void(0)"
+                        class="flex items-center gap-1 nav-link hover:text-[#4cc9f0] transition-all duration-[100ms] ease">
+                        Team
+                        <svg id="teamIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="2" stroke="currentColor" class="w-4 h-4 transition-transform">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </a>
+                    <ul id="teamMenu"
+                        class="absolute left-0 mt-2 hidden border border-gray-700 rounded-xl shadow-md p-5 w-[250px] space-y-2 bg-white/5 backdrop-blur">
+                        <li><a href="#ceo" class="nav-link hover:text-[#4cc9f0]">Mr.St (CEO Of Company)</a></li>
+
+                        <!-- Sub dropdown inside Team -->
+                        <li class="relative" id="subTeamTrigger">
+                            <a href="javascript:void(0)"
+                                class="flex items-center gap-1 nav-link hover:text-[#4cc9f0] transition-all duration-[100ms] ease">
+                                More Members
+                                <svg id="subTeamIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="2" stroke="currentColor" class="w-4 h-4 transition-transform">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </a>
+                            <ul id="subTeamMenu"
+                                class="absolute left-full top-0 ml-5 hidden border border-gray-700 rounded-xl shadow-md p-5 w-[250px] space-y-2 bg-white/5 backdrop-blur">
+                                <li><a href="#zella" class="nav-link hover:text-[#4cc9f0]">Zella Sher.TM</a></li>
+                                <li><a href="#va" class="nav-link hover:text-[#4cc9f0]">VA Freelancer.TM</a></li>
+                                <li><a href="#zoya" class="nav-link hover:text-[#4cc9f0]">Zoya Jutt.TM</a></li>
+                                <li><a href="#zahra" class="nav-link hover:text-[#4cc9f0]">Zahra Ansari.TM</a></li>
+                                <li><a href="#ayesha" class="nav-link hover:text-[#4cc9f0]">Zahra Ansari.TM</a></li>
+                                <li><a href="#amara" class="nav-link hover:text-[#4cc9f0]">Zahra Ansari.TM</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="#testimonials"
+                        class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Reviews</a>
+                </li>
+                <li><a href="#buy"
+                        class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Buy</a>
+                </li>
+                <li><a href="#contact"
+                        class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Contact</a>
+                </li>
+        </nav>
+
+        <!-- Desktop Button -->
+        <a href="account.html" class="hidden lg:block">
+            <button
+                class="hidden lg:block text-white bg-gradient-to-br from-[#4cc9f0] via-[#4cc9f0] to-[#4cc9f0] hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-[#12a16acb] dark:focus:ring-[#4cc9f0] font-medium rounded-full py-2 px-5 text-center cursor-pointer whitespace-nowrap transition hover:translate-y-0.5 duration-[200ms]  shadow-[0_0_25px_#33997a6e]">Click
+                Now</button>
+        </a>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+        class="lg:hidden hidden px-4 py-4 border border-transparent z-100 relative flex flex-col bg-white/10 backdrop-blur text-white justify-between">
+        <div class="">
+            <ul class="space-y-3">
+
+                <li><a href="#home"
+                        class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Home</a>
+                </li>
+                <li><a href="#about"
+                        class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">About</a>
+                </li>
+
+                <!-- Services (Mobile Dropdown) -->
+                <li>
+                    <button onclick="toggleDropdown('servicesMenuMobile','servicesIconMobile', event)"
+                        class="nav-link flex items-center gap-1 cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">
+                        Services
+                        <svg id="servicesIconMobile" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="2" stroke="currentColor" class="w-4 h-4 transition-transform">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </button>
+
+                    <ul id="servicesMenuMobile" class="hidden pl-4 mt-2 space-y-2">
+                        <li><a href="#onpage"
+                                class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Full
+                                SEO Optimization</a></li>
+                        <li><a href="#datascience"
+                                class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Data
+                                Science</a></li>
+                        <li><a href="#cybersecurity"
+                                class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Cyber
+                                Security</a></li>
+                        <li><a href="#fullstackdevelopment"
+                                class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Full
+                                Stack Development</a></li>
+                        <li><a href="#uiux"
+                                class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">UI/UX
+                                Designing</a></li>
+                        <li><a href="#videoediting"
+                                class="cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Video
+                                Editing</a></li>
+                    </ul>
+
+                </li>
+
+                <!-- Team (Mobile Dropdown) -->
+                <li>
+                    <button onclick="toggleDropdown('loansMenuMobile','loansIconMobile' ,event)"
+                        class="nav-link flex items-center gap-1 cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">
+                        Team
+                        <svg id="loansIconMobile" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="2" stroke="currentColor" class="w-4 h-4 transition-transform">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </button>
+                    <ul id="loansMenuMobile" class="hidden pl-4 mt-2 space-y-2">
+                        <li><a href="#ceo"
+                                class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Mr.St
+                                (CEO Of Company)</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#testimonials"
+                        class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Reviews</a>
+                </li>
+                <li><a href="#buy"
+                        class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Buy</a>
+                </li>
+                <li><a href="#contact"
+                        class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Center Button (Mobile) -->
+        <div>
+            <a href="register.html">
+                <button type="button" class="text-white bg-gradient-to-r from-[#4cc9f0] via-[#4cc9f0] to-[#4cc9f0] hover:bg-gradient-to-br focus:ring-2 focus:outline-none focus:ring-[#12a16acb] dark:focus:ring-[#4cc9f0]
+ font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 cursor-pointer whitespace-nowrap w-full mt-5"
+                    onclick="window.location.href='Loginform.html'">Click
+                    Now</button>
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Scroll Button --> <button id="scrollBtn"
+        class="fixed bottom-6 left-6 w-12 h-12 flex items-center justify-center rounded-full bg-[#4cc9f0] text-white shadow-lg hover:bg-[#37a0c0] transform hover:-translate-y-1 transition duration-300 z-50">
+        <i id="scrollIcon" class="fa-solid fa-arrow-down"></i> </button>
+
+    <!-- User Icon -->
+    <a href="account.html">
+        <div id="floatingUserIcon"
+            class="fixed bottom-5 right-5 w-12 h-12 rounded-full overflow-hidden cursor-pointer z-50 shadow-lg border-2 border-[#4cc9f0]">
+            <img id="miniDp" src="assets/user.jpg" alt="User" class="w-full h-full object-cover">
+        </div>
+    </a>
+
+    <!-- Home Section -->
+    <section id="home" class="relative min-h-screen flex items-center lg:px-6 sm:px-4">
+
+        <!-- Content -->
+        <div class="relative z-10 container mx-auto px-6 sm:px-4 lg:px-6 py-10 ">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Left Content -->
+                <div class="text-white">
+                    <span class="text-white font-semibold tracking-wide bg-[#3aaacc] rounded-full py-2.5 px-9">
+                        Welcome to Mr.St Agency
+                    </span>
+                    <h1 class="text-4xl lg:text-5xl font-bold mt-3 lg:mt-5 leading-tight">
+                        Complete Digital Solutions for Your <span class="text-[#4cc9f0]">Business Growth</span>
+                    </h1>
+                    <p class="mt-4 text-gray-200 text-lg">
+                        We provide On-Page & Off-Page SEO, Link Building, Full Stack Development,
+                        UI/UX Designing, Video Editing, and Graphic Designing everything your brand needs to grow.
+                    </p>
+
+                    <!-- Buttons -->
+                    <div class="mt-6 lg:flex gap-4 grid sm:flex">
+                        <a href="#services"
+                            class="text-white bg-gradient-to-br from-[#4cc9f0] via-[#4cc9f0] to-[#4cc9f0] hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-[#4cc9f0cb] font-medium rounded-lg text-xl py-4 text-center cursor-pointer whitespace-nowrap mt-9 w-50 transition hover:-translate-y-1 duration-[200ms] shadow-[0_0_25px_#4cc9f06e] hover:shadow-2xl hover:shadow-[#1c2224]">
+                            Get Started
+                        </a>
+                        <a href="#about"
+                            class="text-white px-6 py-3 sm:mt-9 rounded-lg border border-2 border-[#4cc9f0] hover:bg-[#4cc9f02d] transition hover:-translate-y-1 duration-[200ms] w-50 text-center text-xl hover:shadow-2xl hover:shadow-[#1c2224]">
+                            Learn More
+                        </a>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="mt-10 grid grid-cols-3 gap-6">
+                        <div>
+                            <span class="text-2xl font-bold text-[#4cc9f0]">100+</span>
+                            <p class="text-gray-300">Projects Completed</p>
+                        </div>
+                        <div>
+                            <span class="text-2xl font-bold text-[#4cc9f0]">50+</span>
+                            <p class="text-gray-300">Happy Clients</p>
+                        </div>
+                        <div>
+                            <span class="text-2xl font-bold text-[#4cc9f0]">24/7</span>
+                            <p class="text-gray-300">Support Available</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side (Features Cards) -->
+                <div class="grid grid-cols-2 gap-6">
+                    <div
+                        class="bg-white/5 backdrop-blur p-6 rounded-xl text-center text-white shadow-2xl transition-all duration-300 ease-out
+            hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#1c2224] border border-1 border-gray-700 cursor-pointer">
+                        <i class="fa-solid fa-magnifying-glass-chart text-3xl text-[#4cc9f0]"></i>
+                        <p class="font-semibold">SEO Optimization</p>
+                    </div>
+
+                    <div
+                        class="bg-white/5 backdrop-blur p-6 rounded-xl text-center text-white shadow-lg transition-all duration-300 ease-out
+            hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#1c2224] border border-1 border-gray-700 cursor-pointer">
+                        <i class="fa-solid fa-code text-3xl text-[#4cc9f0]"></i>
+                        <p class="mt-2 font-semibold">Full Stack Development</p>
+                    </div>
+
+                    <div
+                        class="bg-white/5 backdrop-blur p-6 rounded-xl text-center text-white shadow-lg transition-all duration-300 ease-out
+            hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#1c2224] border border-1 border-gray-700 cursor-pointer">
+                        <i class="fa-solid fa-pencil-ruler text-3xl text-[#4cc9f0]"></i>
+                        <p class="mt-2 font-semibold">UI/UX Designing</p>
+                    </div>
+
+                    <div
+                        class="bg-white/5 backdrop-blur p-6 rounded-xl text-center text-white shadow-lg transition-all duration-300 ease-out
+            hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#1c2224] border border-1 border-gray-700 cursor-pointer">
+                        <i class="fa-solid fa-photo-film text-3xl text-[#4cc9f0]"></i>
+                        <p class="mt-2 font-semibold">Video & Graphic Editing</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-0 sm:py-20">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Left Content -->
+                <div class="space-y-6">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">
+                        Empowering Brands & Businesses Since 2015
+                    </h2>
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        Our Agency is a trusted creative and digital partner, delivering secure, reliable, and
+                        innovative solutions for businesses and entrepreneurs across industries.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed">
+                        Our journey began with a clear mission: to make modern marketing, design, and technology
+                        accessible, simple, and results-driven. Over the years, we have grown into a dependable
+                        partner for thousands of clients, offering services that fuel growth and success.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed">
+                        Through creativity, strategy, and innovation, our Agency continues to deliver value-driven
+                        services from branding and advertising to digital transformation while building lasting
+                        relationships with our clients.
+                    </p>
+
+                    <!-- Stats -->
+                    <div class="grid md:grid-cols-3 gap-6 text-center grid-cols-1 border-y border-gray-500 w-full">
+                        <div class="p-6 ">
+                            <div class="text-2xl font-bold text-[#4cc9f0]">8+</div>
+                            <div class="text-gray-300 text-sm">Years of Experience</div>
+                        </div>
+                        <div class="p-6 ">
+                            <div class="text-2xl font-bold text-[#4cc9f0]">500+</div>
+                            <div class="text-gray-300 text-sm">Projects Delivered</div>
+                        </div>
+                        <div class="p-6 ">
+                            <div class="text-2xl font-bold text-[#4cc9f0]">200+</div>
+                            <div class="text-gray-300 text-sm">Happy Clients</div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="grid md:flex gap-4 pt-6 sm:flex">
+                        <a href="#portfolio"
+                            class="px-6 py-3 bg-[#4cc9f0] text-white font-medium rounded-full hover:bg-[#3098b8] shadow transition hover:-translate-y-1 duration-[300ms] text-center hover:shadow-2xl hover:shadow-[#1c2224]">
+                            Check Our Work
+                        </a>
+                        <a href="#team"
+                            class="px-6 py-3 border border-[#4cc9f0] text-[#4cc9f0] font-medium rounded-full hover:bg-[#4cc9f0] hover:text-white text-center transition hover:-translate-y-1 duration-[300ms] hover:shadow-2xl hover:shadow-[#1c2224]">
+                            Meet Our Team
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Image + Floating Card -->
+                <div class="md:relative grid">
+                    <img src="assets/about.webp" alt="About Us" class="rounded-2xl shadow-lg w-full">
+
+                    <!-- Floating Cards -->
+                    <div class="relative mt-4 md:absolute md:-bottom-8 md:left-1/2 lg:left-48 xl:left-64 2xl:left-80 md:transform md:-translate-x-1/2 
+grid md:grid-cols-1 gap-4 lg:grid-cols-1">
+
+                        <!-- Card 1 - Trophy -->
+                        <div
+                            class="bg-[#212121] shadow-2xl drop-shadow-xl border-2 border-gray-800 rounded-2xl p-5 lg:p-2 flex items-center gap-4 hover:-translate-y-0.5 transition-transform duration-300 lg:w-64 xl:w-96">
+                            <div class="p-3 rounded-full bg-blue-100 text-blue-600 text-2xl lg:text-xl">
+                                <i class="fa-solid fa-trophy"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-lg font-semibold text-[#4cc9f0] lg:text-[16px]">Best Agency Award</h5>
+                                <span class="text-sm text-white">Excellence in Client Service 2023</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 - Badge -->
+                        <div
+                            class="bg-[#212121] shadow-2xl drop-shadow-xl border-2 border-gray-800 rounded-2xl p-5 lg:p-2 flex items-center gap-4 hover:-translate-y-0.5 transition-transform duration-300 lg:w-64 xl:w-96">
+                            <div class="p-3 rounded-full bg-green-100 text-green-600 text-2xl lg:text-xl">
+                                <i class="fa-solid fa-medal"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-lg font-semibold text-[#4cc9f0]">Innovation Award</h5>
+                                <span class="text-sm text-white">Creative Excellence 2022</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 - Shield -->
+                        <div
+                            class="bg-[#212121] shadow-2xl drop-shadow-xl border-2 border-gray-800 rounded-2xl p-5 lg:p-4 flex items-center gap-4 hover:-translate-y-0.5 transition-transform duration-300 lg:w-64 xl:w-96">
+                            <div class="p-3 rounded-full bg-yellow-100 text-yellow-600 text-2xl lg:text-xl">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-lg font-semibold text-[#4cc9f0]">Trusted Brand</h5>
+                                <span class="text-sm text-white">Most Reliable Agency 2021</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Clients Section -->
+    <section class="">
+        <div class="container mx-auto px-6 lg:px-12 ">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-white mb-14 mt-10">
+                Trusted By Leading Businesses
+            </h2>
+
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Client 1 -->
+                    <div
+                        class="swiper-slide flex justify-center items-center  filter grayscale hover:grayscale-0 transition-all duration-[300ms] ease cursor-pointer">
+                        <img src="assets/google.webp" alt="google logo" class="w-40 h-auto object-contain" />
+                    </div>
+
+                    <!-- Client 2 -->
+                    <div
+                        class="swiper-slide flex justify-center items-center  filter grayscale hover:grayscale-0 transition-all duration-[300ms] ease cursor-pointer">
+                        <img src="assets/microsoft.png" alt="microsoft" class="w-40 h-auto object-contain" />
+                    </div>
+
+                    <!-- Client 3 -->
+                    <div
+                        class="swiper-slide flex justify-center items-center  filter grayscale hover:grayscale-0 transition-all duration-[300ms] ease cursor-pointer">
+                        <img src="assets/apple.jpg" alt="apple" class="w-40 h-auto object-contain" />
+                    </div>
+
+                    <!-- Client 4 -->
+                    <div
+                        class="swiper-slide flex justify-center items-center filter grayscale hover:grayscale-0 transition-all duration-[300ms] ease cursor-pointer">
+                        <img src="assets/meta.png" alt="Meta" class="w-40 h-auto object-contain" />
+                    </div>
+
+                    <!-- Client 1 -->
+                    <div
+                        class="swiper-slide flex justify-center items-center  filter grayscale hover:grayscale-0 transition-all duration-[300ms] ease cursor-pointer">
+                        <img src="assets/apple.jpg" alt="apple" class="w-40 h-auto object-contain" />
+                    </div>
+
+                    <!-- Client 2 -->
+                    <div
+                        class="swiper-slide flex justify-center items-center  filter grayscale hover:grayscale-0 transition-all duration-[300ms] ease cursor-pointer">
+                        <img src="assets/nvidia-7.svg" alt="nvidia" class="w-40 h-auto object-contain mt-5" />
+                    </div>
+
+                    <!-- Client 3 -->
+                    <div
+                        class="swiper-slide flex content-center justify-center items-center  filter grayscale hover:grayscale-0 transition-all duration-[300ms] ease cursor-pointer">
+                        <img src="assets/intel.png" alt="intel" class="w-40 h-auto object-contain mt-5" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Feature Services Session -->
+
+    <section id="featured-services" class="py-16 bg-[#0f0f0f]">
+        <!-- Section Title -->
+        <div class="container mx-auto text-center mb-12">
+            <h2 class="text-3xl font-bold text-white text-center">Featured Services</h2>
+
+            <div class="relative w-full mt-3 mb-5 h-[3px] flex justify-center items-center">
+                <!-- Gray full line -->
+                <div class="w-50 h-[1px] bg-gray-400"></div>
+                <!-- Center green line -->
+                <div class="w-18 h-[4px] absolute bg-[#4cc9f0] rounded-full"></div>
+            </div>
+
+            <p class="text-gray-300 mt-2">Featured Services</p>
+        </div>
+
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <!-- Left Content -->
+                <div>
+                    <span
+                        class="text-[#4cc9f0] py-2 px-3 rounded-xl font-semibold bg-[#96e6ff34] uppercase tracking-wide">Professional
+                        Services</span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white mt-3">
+                        Elevating Business Performance Through Strategic Digital Solutions
+                    </h2>
+                    <p class="text-gray-300 mt-4">
+                        Our agency delivers tailored digital strategies that help businesses grow and thrive online.
+                        From SEO and web development to creative design and brand promotion, we provide innovative
+                        solutions
+                        that drive engagement, enhance visibility, and generate measurable results for your brand.
+                    </p>
+
+                    <div class="mt-6 flex gap-3">
+                        <a href="#contact"
+                            class="group inline-flex items-center gap-2 bg-[#4cc9f0] font-semibold text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#3aaccf] transition  hover:shadow-2xl hover:shadow-[#1c2224]">
+
+                            <span>
+                                Request a Consultation
+                                <i
+                                    class="fa-solid fa-arrow-right transform transition-transform duration-300 group-hover:translate-x-1"></i>
+                            </span>
+
+                            <i
+                                class="bi bi-arrow-right transform transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Image -->
+                <div class="relative">
+                    <img src="assets/services.jpg" alt="Agency Services"
+                        class="rounded-xl shadow-lg w-full h-auto object-cover">
+                    <div class="absolute -top-6 -left-6 w-20 h-20 bg-[#4cc9f0]/10 rounded-full"></div>
+                    <div class="absolute -bottom-6 -right-6 w-28 h-28 bg-[#4cc9f0]/20 rounded-full"></div>
+                </div>
+            </div>
+
+            <!-- Services Slider -->
+            <div class="mt-16">
+                <div class="swiper mySwiperServices">
+                    <div class="swiper-wrapper">
+
+                        <!-- Service Card 1 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="card relative bg-[#1f1f1f] rounded-xl shadow-md p-6 group transition-all duration-500 hover:bg-[#4cc9f0] hover:text-white overflow-hidden  hover:shadow-2xl hover:shadow-[#1c2224]">
+
+                                <div class="text-[#4cc9f0] text-3xl mb-4 group-hover:text-white">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                </div>
+
+                                <div class="content">
+                                    <h4 class="text-lg font-semibold text-white mb-2 group-hover:text-white">
+                                        <a href="#">Brand Strategy Development</a>
+                                    </h4>
+                                    <p class="text-gray-300 group-hover:text-white">
+                                        Creating powerful strategies that define and strengthen your brand identity.
+                                    </p>
+                                </div>
+
+                                <!-- Number + Line -->
+                                <div class="relative mt-4 w-20 h-4 group">
+                                    <span
+                                        class="absolute left-7 top-1/2 w-full h-[1px] bg-[#4cc9f0] -translate-y-1/2 transition-colors group-hover:-translate-x-3 duration-300 group-hover:bg-white"></span>
+                                    <span
+                                        class="absolute left-0 top-5 text-[#4cc9f0] font-bold text-lg -translate-y-1/2 transition-transform duration-300 ease-in-out group-hover:translate-x-11 group-hover:text-white">
+                                        01
+                                    </span>
+                                </div>
+
+                                <!-- Arrow Button -->
+                                <a href="details.html" class="arrow-btn absolute top-5 right-0 
+          bg-white text-[#4cc9f0] w-12 h-12 rounded-full flex items-center justify-center
+          opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100 
+          transition-all duration-500 ease-out origin-top-right rotate-12 shadow-md">
+                                    <i class="fa-solid fa-arrow-up text-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <!-- Service Card 2 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="card relative bg-[#1f1f1f] rounded-xl shadow-md p-6 group transition-all duration-500 hover:bg-[#4cc9f0] hover:text-white overflow-hidden  hover:shadow-2xl hover:shadow-[#1c2224]">
+
+                                <div class="text-[#4cc9f0] text-3xl mb-4 group-hover:text-white">
+                                    <i class="fa-solid fa-chart-line"></i>
+                                </div>
+
+                                <div class="content">
+                                    <h4 class="text-lg font-semibold text-white mb-2 group-hover:text-white">
+                                        <a href="#">Market Expansion Strategy</a>
+                                    </h4>
+                                    <p class="text-gray-300 group-hover:text-white">
+                                        Helping brands identify new opportunities and expand into profitable markets.
+                                    </p>
+                                </div>
+
+                                <!-- Number + Line -->
+                                <div class="relative mt-4 w-20 h-4 group">
+                                    <span
+                                        class="absolute left-7 top-1/2 w-full h-[1px] bg-[#4cc9f0] -translate-y-1/2 transition-colors group-hover:-translate-x-3 duration-300 group-hover:bg-white"></span>
+                                    <span
+                                        class="absolute left-0 top-5 text-[#4cc9f0] font-bold text-lg -translate-y-1/2 transition-transform duration-300 ease-in-out group-hover:translate-x-11 group-hover:text-white">
+                                        02
+                                    </span>
+                                </div>
+
+                                <!-- Arrow Button -->
+                                <a href="details.html" class="arrow-btn absolute top-5 right-0 
+          bg-white text-[#4cc9f0] w-12 h-12 rounded-full flex items-center justify-center
+          opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100 
+          transition-all duration-500 ease-out origin-top-right rotate-12 shadow-md">
+                                    <i class="fa-solid fa-arrow-up text-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <!-- Service Card 3 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="card relative bg-[#1f1f1f] rounded-xl shadow-md p-6 group transition-all duration-500 hover:bg-[#4cc9f0] hover:text-white overflow-hidden  hover:shadow-2xl hover:shadow-[#1c2224]">
+
+                                <div class="text-[#4cc9f0] text-3xl mb-4 group-hover:text-white">
+                                    <i class="fa-solid fa-user-shield"></i>
+                                </div>
+
+                                <div class="content">
+                                    <h4 class="text-lg font-semibold text-white mb-2 group-hover:text-white">
+                                        <a href="#">Crisis & Reputation Management</a>
+                                    </h4>
+                                    <p class="text-gray-300 group-hover:text-white">
+                                        Protecting your brand reputation with proactive risk and crisis management
+                                        strategies.
+                                    </p>
+                                </div>
+
+                                <!-- Number + Line -->
+                                <div class="relative mt-4 w-20 h-4 group">
+                                    <span
+                                        class="absolute left-7 top-1/2 w-full h-[1px] bg-[#4cc9f0] -translate-y-1/2 transition-colors group-hover:-translate-x-3 duration-300 group-hover:bg-white"></span>
+                                    <span
+                                        class="absolute left-0 top-5 text-[#4cc9f0] font-bold text-lg -translate-y-1/2 transition-transform duration-300 ease-in-out group-hover:translate-x-11 group-hover:text-white">
+                                        03
+                                    </span>
+                                </div>
+
+                                <!-- Arrow Button -->
+                                <a href="details.html" class="arrow-btn absolute top-5 right-0 
+          bg-white text-[#4cc9f0] w-12 h-12 rounded-full flex items-center justify-center
+          opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100 
+          transition-all duration-500 ease-out origin-top-right rotate-12 shadow-md">
+                                    <i class="fa-solid fa-arrow-up text-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <!-- Service Card 4 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="card relative bg-[#1f1f1f] rounded-xl shadow-md p-6 group transition-all duration-500 hover:bg-[#4cc9f0] hover:text-white overflow-hidden  hover:shadow-2xl hover:shadow-[#1c2224]">
+
+                                <div class="text-[#4cc9f0] text-3xl mb-4 group-hover:text-white">
+                                    <i class="fa-solid fa-lightbulb"></i>
+                                </div>
+
+                                <div class="content">
+                                    <h4 class="text-lg font-semibold text-white mb-2 group-hover:text-white">
+                                        <a href="#">Creative & Digital Innovation</a>
+                                    </h4>
+                                    <p class="text-gray-300 group-hover:text-white">
+                                        Driving brand growth with innovative campaigns and digital-first strategies.
+                                    </p>
+                                </div>
+
+                                <!-- Number + Line -->
+                                <div class="relative mt-4 w-20 h-4 group">
+                                    <span
+                                        class="absolute left-7 top-1/2 w-full h-[1px] bg-[#4cc9f0] -translate-y-1/2 transition-colors group-hover:-translate-x-3 duration-300 group-hover:bg-white"></span>
+                                    <span
+                                        class="absolute left-0 top-5 text-[#4cc9f0] font-bold text-lg -translate-y-1/2 transition-transform duration-300 ease-in-out group-hover:translate-x-11 group-hover:text-white">
+                                        04
+                                    </span>
+                                </div>
+
+                                <!-- Arrow Button -->
+                                <a href="details.html" class="arrow-btn absolute top-5 right-0 
+          bg-white text-[#4cc9f0] w-12 h-12 rounded-full flex items-center justify-center
+          opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100 
+          transition-all duration-500 ease-out origin-top-right rotate-12 shadow-md">
+                                    <i class="fa-solid fa-arrow-up text-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <!-- Service Card 5 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="card relative bg-[#1f1f1f] rounded-xl shadow-md p-6 group transition-all duration-500 hover:bg-[#4cc9f0] hover:text-white overflow-hidden  hover:shadow-2xl hover:shadow-[#1c2224]">
+
+                                <div class="text-[#4cc9f0] text-3xl mb-4 group-hover:text-white">
+                                    <i class="fa-solid fa-users"></i>
+                                </div>
+
+                                <div class="content">
+                                    <h4 class="text-lg font-semibold text-white mb-2 group-hover:text-white">
+                                        <a href="#">Team & Talent Development</a>
+                                    </h4>
+                                    <p class="text-gray-300 group-hover:text-white">
+                                        Building strong creative teams with leadership, training, and talent programs.
+                                    </p>
+                                </div>
+
+                                <!-- Number + Line -->
+                                <div class="relative mt-4 w-20 h-4 group">
+                                    <span
+                                        class="absolute left-7 top-1/2 w-full h-[1px] bg-[#4cc9f0] -translate-y-1/2 transition-colors group-hover:-translate-x-3 duration-300 group-hover:bg-white"></span>
+                                    <span
+                                        class="absolute left-0 top-5 text-[#4cc9f0] font-bold text-lg -translate-y-1/2 transition-transform duration-300 ease-in-out group-hover:translate-x-11 group-hover:text-white">
+                                        05
+                                    </span>
+                                </div>
+
+                                <!-- Arrow Button -->
+                                <a href="details.html" class="arrow-btn absolute top-5 right-0 
+          bg-white text-[#4cc9f0] w-12 h-12 rounded-full flex items-center justify-center
+          opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100 
+          transition-all duration-500 ease-out origin-top-right rotate-12 shadow-md">
+                                    <i class="fa-solid fa-arrow-up text-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="flex justify-center gap-4 mt-6">
+                        <button
+                            class="swiper-services-prev bg-[#4cc9f0] text-white px-6 py-4 rounded-full hover:bg-[#2b8fad] transition">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                        <button
+                            class="swiper-services-next bg-[#4cc9f0] text-white px-6 py-4  rounded-full hover:bg-[#2b8fad] transition">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="agency-process" class="py-20 md:py-24">
+        <!-- Section Title -->
+        <div class="container mx-auto text-center mb-12 px-3 sm:px-6 md:px-10">
+            <h2 class="text-3xl font-bold text-white">How We Work</h2>
+            <div class="relative w-full mt-3 mb-5 h-[3px] flex justify-center items-center">
+                <!-- Gray full line -->
+                <div class="w-50 h-[1px] bg-gray-400"></div>
+                <!-- Center blue line -->
+                <div class="w-18 h-[4px] absolute bg-[#4cc9f0] rounded-full"></div>
+            </div>
+            <p class="text-gray-300 mt-2">Step by step process of how our agency works</p>
+        </div>
+
+        <div class="container mx-auto px-3 sm:px-6 md:px-10 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+
+            <!-- Step 1 -->
+            <div class="relative bg-[#1f1f1f] rounded-2xl shadow-md p-6 sm:px-10 text-center group transition-all duration-500 ease hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(76,201,240,0.15)]
+ hover:border hover:border-[#4cc9f0] xl:px-6 xl:p-6 2xl:px-6 2xl:py-14">
+
+                <!-- Icon Circle -->
+                <div
+                    class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-[#4cc9f021] text-[#4cc9f0] text-3xl mb-4 2xl:mb-5 transition-all duration-500 ease-in-out group-hover:bg-[#4cc9f0] group-hover:text-white group-hover:h-[85px] group-hover:w-[85px] group-hover:-translate-y-1">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+
+                <!-- Step Label -->
+                <div
+                    class="inline-block w-fit text-sm font-semibold text-white rounded-full text-center px-6 py-1 bg-[#4cc9f0] mx-auto mb-2 2xl:mb-5">
+                    Step 1
+                </div>
+
+                <!-- Title -->
+                <h3 class="text-lg font-bold text-white mt-1 2xl:text-xl">Idea & Research</h3>
+
+                <!-- Description -->
+                <p class="text-gray-300 text-sm mt-2 2xl:text-lg 2xl:mt-5">
+                    We start with brainstorming, research, and strategy building for your project goals.
+                </p>
+
+                <!-- Arrow -->
+                <a href="#home" class="absolute right-[-20px] top-1/2 transform -translate-y-1/2 hidden md:block group">
+                    <div
+                        class="bg-[#4cc9f0] text-white w-8 h-8 rounded-full flex items-center justify-center transition-transform duration-500 ease-in-out group-hover:translate-x-[2px] text-sm">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="relative bg-[#1f1f1f] rounded-2xl shadow-md p-6 sm:px-10 text-center group transition-all duration-500 ease hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(76,201,240,0.15)]
+ hover:border hover:border-[#4cc9f0] xl:px-6 xl:p-6 2xl:px-6 2xl:py-14">
+
+                <div
+                    class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-[#4cc9f021] text-[#4cc9f0] text-3xl mb-4 2xl:mb-5 transition-all duration-500 ease-in-out group-hover:bg-[#4cc9f0] group-hover:text-white group-hover:h-[85px] group-hover:w-[85px] group-hover:-translate-y-1">
+                    <i class="fa-solid fa-pen-ruler"></i>
+                </div>
+
+                <div
+                    class="inline-block w-fit text-sm font-semibold text-white rounded-full text-center px-6 py-1 bg-[#4cc9f0] mx-auto mb-2 2xl:mb-5">
+                    Step 2
+                </div>
+
+                <h3 class="text-lg font-bold text-white mt-1 2xl:text-xl">Planning & Design</h3>
+                <p class="text-gray-300 text-sm mt-2 2xl:text-lg 2xl:mt-5">
+                    Creating wireframes, prototypes, and detailed plans to give a clear roadmap.
+                </p>
+
+                <a href="#home" class="absolute right-[-20px] top-1/2 transform -translate-y-1/2 hidden md:block group">
+                    <div
+                        class="bg-[#4cc9f0] text-white w-8 h-8 rounded-full flex items-center justify-center transition-transform duration-500 ease-in-out group-hover:translate-x-[2px] text-sm">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="relative bg-[#1f1f1f] rounded-2xl shadow-md p-6 sm:px-10 text-center group transition-all duration-500 ease hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(76,201,240,0.15)]
+ hover:border hover:border-[#4cc9f0] xl:px-6 xl:p-6 2xl:px-6 2xl:py-14">
+
+                <div
+                    class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-[#4cc9f021] text-[#4cc9f0] text-3xl mb-4 2xl:mb-5 transition-all duration-500 ease-in-out group-hover:bg-[#4cc9f0] group-hover:text-white group-hover:h-[85px] group-hover:w-[85px] group-hover:-translate-y-1">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+
+                <div
+                    class="inline-block w-fit text-sm font-semibold text-white rounded-full text-center px-6 py-1 bg-[#4cc9f0] mx-auto mb-2 2xl:mb-5">
+                    Step 3
+                </div>
+
+                <h3 class="text-lg font-bold text-white mt-1 2xl:text-xl">Development</h3>
+                <p class="text-gray-300 text-sm mt-2 2xl:text-lg 2xl:mt-5">
+                    Our team develops your project using latest technologies with high quality standards.
+                </p>
+
+                <a href="#home" class="absolute right-[-20px] top-1/2 transform -translate-y-1/2 hidden md:block group">
+                    <div
+                        class="bg-[#4cc9f0] text-white w-8 h-8 rounded-full flex items-center justify-center transition-transform duration-500 ease-in-out group-hover:translate-x-[2px] text-sm">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="relative bg-[#1f1f1f] rounded-2xl shadow-md p-6 sm:px-10 text-center group overflow-hidden transition-all duration-500 ease hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(76,201,240,0.15)]
+ hover:border hover:border-[#4cc9f0] xl:px-6 xl:p-6 2xl:px-6 2xl:py-14">
+
+                <div
+                    class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-[#4cc9f021] text-[#4cc9f0] text-3xl mb-4 2xl:mb-5 transition-all duration-500 ease-in-out group-hover:bg-[#4cc9f0] group-hover:text-white group-hover:h-[85px] group-hover:w-[85px] group-hover:-translate-y-1">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+
+                <div
+                    class="inline-block w-fit text-sm font-semibold text-white rounded-full text-center px-6 py-1 bg-[#4cc9f0] mx-auto mb-2 2xl:mb-5">
+                    Step 4
+                </div>
+
+                <h3 class="text-lg font-bold text-white mt-1 2xl:text-xl">Launch & Support</h3>
+                <p class="text-gray-300 text-sm mt-2 2xl:text-lg 2xl:mt-5 transition-none">
+                    After launch, we provide ongoing support, updates, and improvements for your success.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="features" class="features section py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-8">
+
+                <!-- Tabs Navigation -->
+                <div class="lg:w-[400px]">
+                    <ul class="flex flex-col gap-2 sm:pl-10 md:pl-14 lg:pl-5 2xl:-ml-6">
+
+                        <!-- Tab 1 -->
+                        <li>
+                            <button
+                                class="tab-button flex items-center p-4 rounded-xl transition-all duration-300 hover:-translate-y-1 group active:bg-[#4cc9f025] text-left"
+                                data-tab="tab-1">
+                                <!-- Icon Box -->
+                                <div
+                                    class="icon-box text-[#4cc9f0] bg-[#4cc9f021] text-2xl p-2.5 rounded-xl mr-4 transition-all duration-300 group-hover:bg-[#4cc9f0] group-hover:text-white">
+                                    <i class="fa-solid fa-bullhorn"></i>
+                                </div>
+                                <!-- Text -->
+                                <div>
+                                    <h4
+                                        class="font-semibold text-white transition-colors duration-300 group-hover:text-[#4cc9f0]">
+                                        Digital Marketing</h4>
+                                    <p class="text-gray-300 text-sm transition-colors duration-300">Grow your brand &
+                                        reach your target audience effectively.</p>
+                                </div>
+                            </button>
+                        </li>
+
+                        <!-- Tab 2 -->
+                        <li>
+                            <button
+                                class="tab-button flex items-center p-4 rounded-xl transition-all duration-300 hover:-translate-y-1 group active:bg-[#4cc9f025] text-left"
+                                data-tab="tab-2">
+                                <div
+                                    class="icon-box text-[#4cc9f0] bg-[#4cc9f021] text-2xl p-2.5 rounded-xl mr-4 transition-all duration-300 group-hover:bg-[#4cc9f0] group-hover:text-white">
+                                    <i class="fa-solid fa-code"></i>
+                                </div>
+                                <div>
+                                    <h4
+                                        class="font-semibold text-white transition-colors duration-300 group-hover:text-[#4cc9f0]">
+                                        Web Development</h4>
+                                    <p class="text-gray-300 text-sm transition-colors duration-300">Build modern,
+                                        responsive, and fast websites tailored to your business.</p>
+                                </div>
+                            </button>
+                        </li>
+
+                        <!-- Tab 3 -->
+                        <li>
+                            <button
+                                class="tab-button flex items-center p-4 rounded-xl transition-all duration-300 hover:-translate-y-1 group active:bg-[#4cc9f025] text-left"
+                                data-tab="tab-3">
+                                <div
+                                    class="icon-box text-[#4cc9f0] bg-[#4cc9f021] text-2xl p-2.5 rounded-xl mr-4 transition-all duration-300 group-hover:bg-[#4cc9f0] group-hover:text-white">
+                                    <i class="fa-solid fa-pencil-ruler"></i>
+                                </div>
+                                <div>
+                                    <h4
+                                        class="font-semibold text-white transition-colors duration-300 group-hover:text-[#4cc9f0]">
+                                        UI/UX Design</h4>
+                                    <p class="text-gray-300 text-sm transition-colors duration-300">Create engaging
+                                        designs for web & mobile applications.</p>
+                                </div>
+                            </button>
+                        </li>
+
+                        <!-- Tab 4 -->
+                        <li>
+                            <button
+                                class="tab-button flex items-center p-4 rounded-xl transition-all duration-300 hover:-translate-y-1 group active:bg-[#4cc9f025] text-left"
+                                data-tab="tab-4">
+                                <div
+                                    class="icon-box text-[#4cc9f0] bg-[#4cc9f021] text-2xl p-2.5 rounded-xl mr-4 transition-all duration-300 group-hover:bg-[#4cc9f0] group-hover:text-white">
+                                    <i class="fa-solid fa-photo-film"></i>
+                                </div>
+                                <div>
+                                    <h4
+                                        class="font-semibold text-white transition-colors duration-300 group-hover:text-[#4cc9f0]">
+                                        Video & Graphic Design</h4>
+                                    <p class="text-gray-300 text-sm transition-colors duration-300">Professional video
+                                        editing & graphic solutions for your brand.</p>
+                                </div>
+                            </button>
+                        </li>
+
+                        <!-- Tab 5 -->
+                        <li>
+                            <button
+                                class="tab-button flex items-center p-4 rounded-xl transition-all duration-300 hover:-translate-y-1 group active:bg-[#4cc9f025] text-left"
+                                data-tab="tab-5">
+                                <div
+                                    class="icon-box text-[#4cc9f0] bg-[#4cc9f021] text-2xl p-2.5 rounded-xl mr-4 transition-all duration-300 group-hover:bg-[#4cc9f0] group-hover:text-white">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                                <div>
+                                    <h4
+                                        class="font-semibold text-white transition-colors duration-300 group-hover:text-[#4cc9f0]">
+                                        SEO & Social Media</h4>
+                                    <p class="text-gray-300 text-sm transition-colors duration-300">Boost your online
+                                        presence & increase engagement.</p>
+                                </div>
+                            </button>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- Tabs Content -->
+                <div class="lg:w-2/3">
+                    <div class="space-y-20 2xl:-mr-20">
+
+                        <!-- Tab 1 Content -->
+                        <div class="tab-panel sm:px-10 lg:px-0 sm:pt-6" id="tab-1">
+                            <div
+                                class="flex flex-col lg:flex-row gap-6 items-center bg-[#0f0f0f] lg:shadow-xl lg:shadow-[#1d1c1c] lg:p-10 lg:rounded-2xl">
+                                <div class="lg:w-1/2">
+                                    <h3 class="text-xl font-bold text-white mb-2">Digital Marketing Strategy</h3>
+                                    <div class="bg-[#4cc9f0] w-15 h-[3px] rounded-full mb-3"></div>
+                                    <p class="text-gray-300 mb-2">
+                                        We design and execute highly effective digital marketing campaigns that elevate
+                                        your brand presence, engage your target audience, and drive measurable growth
+                                        for your business online.
+                                    </p>
+
+                                    <p class="text-gray-300 mb-2 bg-[#47a9c715] p-5 mr-2 rounded-xl">Optimized solutions
+                                        for better ROI and audience engagement.</p>
+                                    <ul class="space-y-2">
+                                        <li
+                                            class="flex items-center gap-2 text-gray-400 transition-all duration-200 hover:translate-x-1 hover:text-white">
+                                            <i class="fa-solid fa-circle-check text-[#4cc9f0]"></i> Targeted Campaigns
+                                        </li>
+                                        <li
+                                            class="flex items-center gap-2 text-gray-400 transition-all duration-200 hover:translate-x-1 hover:text-white">
+                                            <i class="fa-solid fa-circle-check text-[#4cc9f0]"></i> Content Strategy
+                                        </li>
+                                        <li
+                                            class="flex items-center gap-2 text-gray-400 transition-all duration-200 hover:translate-x-1 hover:text-white">
+                                            <i class="fa-solid fa-circle-check text-[#4cc9f0]"></i> Brand Awareness
+                                        </li>
+                                        <li
+                                            class="flex items-center gap-2 text-gray-400 transition-all duration-200 hover:translate-x-1 hover:text-white">
+                                            <i class="fa-solid fa-circle-check text-[#4cc9f0]"></i> Analytics &
+                                            Reporting
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="lg:w-1/2 overflow-hidden rounded-xl cursor-pointer group">
+                                    <img src="assets/account opening.webp" alt="Digital Marketing"
+                                        class="w-full h-full object-cover transition-transform duration-600 ease-in-out group-hover:scale-105">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="services" class="services section bg-[#0f0f0f] py-16 2xl:px-44 lg:px-30">
+
+        <!-- Section Title -->
+        <div class="container mx-auto text-center mb-12">
+            <h2 class="text-3xl font-bold text-white mb-2">Services</h2>
+            <div class="relative w-full mt-3 mb-5 h-[3px] flex justify-center items-center">
+                <!-- Gray full line -->
+                <div class="w-50 h-[1px] bg-gray-400"></div>
+                <!-- Center green line -->
+                <div class="w-18 h-[4px] absolute bg-[#4cc9f0] rounded-full"></div>
+            </div>
+            <p class="text-gray-300 uppercase tracking-wider">CHECK OUR AGENCY SERVICES</p>
+        </div>
+
+        <div class="container mx-auto grid lg:grid-cols-2 gap-8 px-1 sm:px-10 xl:px-20">
+
+            <!-- Service Card 1 (Full SEO Service) -->
+            <div id="onpage"
+                class="bg-[#242424] rounded-2xl p-6 relative group transition-all duration-500 border-[#4cc9f0] border-2 hover:shadow-2xl hover:shadow-[0_10px_20px_rgba(76,201,240,0.2)]">
+
+                <div class="text-white text-4xl mb-4 p-4 rounded-xl bg-[#4cc9f0] inline-block 
+    shadow-[0_4px_12px_rgba(76,201,240,0.25)] 
+    transform transition-transform duration-500 group-hover:scale-105 group-hover:rotate-3">
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                </div>
+
+                <h3 class="text-xl text-white mb-2 font-bold">Full SEO Optimization</h3>
+
+                <p class="text-gray-300 mb-4">
+                    Complete SEO services On-Page, Off-Page, and Link Building to boost traffic, improve rankings, and
+                    grow visibility.
+                </p>
+
+                <div class="flex justify-between items-center">
+                    <span class="bg-[#4cc9f0] text-white rounded-full px-3 font-semibold text-sm">Most Effective</span>
+                    <span class="text-[#4cc9f0] font-semibold">Starting at $500</span>
+                </div>
+
+                <a href="details.html">
+                    <button class="bg-[#4cc9f0] px-5 py-3 rounded-full text-white text-sm 
+        shadow-[0_4px_12px_rgba(76,201,240,0.25)] mt-4 transform transition-transform duration-500 
+        group-hover:translate-x-1 group-hover:bg-[#3ba6d7]">
+                        Get Started <li class="fa-solid fa-arrow-right text-white text-xs ml-2"></li>
+                    </button>
+                </a>
+            </div>
+
+
+            <!-- Service Card 2 (Data Science) -->
+            <div id="datascience" class="bg-[#242424] rounded-2xl shadow-lg p-6 relative group hover:-translate-y-2 transition-all duration-500 
+shadow-[0_4px_12px_rgba(76,201,240,0.15)] hover:shadow-[0_12px_25px_rgba(76,201,240,0.2)] overflow-hidden">
+
+                <!-- Circle (hidden by default, only shows on hover) -->
+                <div
+                    class="absolute -top-16 -right-16 w-32 h-32 bg-[#4cc9f0]/10 rounded-full opacity-0 group-hover:opacity-100 group-hover:-top-8 group-hover:-right-8 transition-all duration-700 ease-out">
+                </div>
+
+                <div class="text-white text-4xl mb-4 p-4 rounded-xl bg-[#4cc9f0] inline-block 
+shadow-[0_4px_12px_rgba(76,201,240,0.25)] 
+transform transition-transform duration-500 group-hover:scale-105 group-hover:rotate-3 relative z-10">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-[#4cc9f0] relative z-10">
+                    Data Science
+                </h3>
+                <p class="text-gray-300 mb-4 relative z-10">
+                    Analyze data, build predictive models, visualize insights, and make data-driven decisions with
+                    expert data science solutions.
+                </p>
+
+                <div class="flex justify-between items-center relative z-10">
+                    <span class="text-[#4cc9f0] font-semibold">Starting at $300</span>
+                </div>
+
+                <a href="details.html">
+                    <button class="bg-[#4cc9f0] px-5 py-3 rounded-full text-white text-sm 
+    shadow-[0_4px_12px_rgba(76,201,240,0.3)] mt-4 transform transition-transform duration-500 
+    group-hover:translate-x-1 group-hover:bg-[#3ba6d7] relative z-10">
+                        Learn More <li class="fa-solid fa-arrow-right text-white text-xs ml-2"></li>
+                    </button>
+                </a>
+            </div>
+
+
+
+            <!-- Service Card 3 (Cyber Security) -->
+            <div id="cybersecurity" class="bg-[#242424] rounded-2xl shadow-lg p-6 relative group hover:-translate-y-2 transition-all duration-500 
+    shadow-[0_4px_12px_rgba(76,201,240,0.15)] hover:shadow-[0_14px_28px_rgba(76,201,240,0.2)] overflow-hidden">
+
+                <!-- Circle (hidden by default, only shows on hover) -->
+                <div
+                    class="absolute -top-16 -right-16 w-32 h-32 bg-[#4cc9f0]/10 rounded-full opacity-0 group-hover:opacity-100 group-hover:-top-8 group-hover:-right-8 transition-all duration-700 ease-out">
+                </div>
+
+                <div class="text-white text-4xl mb-4 p-4 rounded-xl bg-[#4cc9f0] inline-block 
+    shadow-[0_4px_12px_rgba(76,201,240,0.25)] 
+    transform transition-transform duration-500 group-hover:scale-105 group-hover:rotate-3 relative z-10">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+                <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-[#4cc9f0] relative z-10">
+                    Cyber Security
+                </h3>
+                <p class="text-gray-300 mb-4 relative z-10">
+                    Protect your digital assets with advanced security measures, threat monitoring, and ethical hacking
+                    solutions.
+                </p>
+
+                <div class="flex justify-between items-center relative z-10">
+                    <span class="text-[#4cc9f0] font-semibold">Starting at $500</span>
+                </div>
+
+                <a href="details.html">
+                    <button class="bg-[#4cc9f0] px-5 py-3 rounded-full text-white text-sm 
+        shadow-[0_4px_12px_rgba(76,201,240,0.3)] mt-4 transform transition-transform duration-500 
+        group-hover:translate-x-1 group-hover:bg-[#3ba6d7] relative z-10">
+                        Explore <li class="fa-solid fa-arrow-right text-white text-xs ml-2"></li>
+                    </button>
+                </a>
+            </div>
+
+
+
+            <!-- Service Card 4 (Full Stack Development) -->
+            <div id="fullstackdevelopment" class="bg-[#242424] rounded-2xl shadow-lg p-6 relative group hover:-translate-y-2 transition-all duration-500 
+    shadow-[0_4px_12px_rgba(76,201,240,0.15)] hover:shadow-[0_14px_28px_rgba(76,201,240,0.2)] overflow-hidden">
+
+                <!-- Circle (hidden by default, only shows on hover) -->
+                <div
+                    class="absolute -top-16 -right-16 w-32 h-32 bg-[#4cc9f0]/10 rounded-full opacity-0 group-hover:opacity-100 group-hover:-top-8 group-hover:-right-8 transition-all duration-700 ease-out">
+                </div>
+
+                <div class="text-white text-4xl mb-4 p-4 rounded-xl bg-[#4cc9f0] inline-block 
+    shadow-[0_4px_12px_rgba(76,201,240,0.25)] 
+    transform transition-transform duration-500 group-hover:scale-105 group-hover:rotate-3 relative z-10">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+
+                <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-[#4cc9f0] relative z-10">
+                    Full Stack Development
+                </h3>
+                <p class="text-gray-300 mb-4 relative z-10">
+                    Learn and implement end-to-end web development including frontend, backend, databases, and
+                    deployment for real-world projects.
+                </p>
+
+                <div class="flex justify-between items-center relative z-10">
+                    <span class="text-[#4cc9f0] font-semibold">Starting at $800</span>
+                </div>
+
+                <a href="details.html">
+                    <button class="bg-[#4cc9f0] px-5 py-3 rounded-full text-white text-sm 
+        shadow-[0_4px_12px_rgba(76,201,240,0.3)] mt-4 transform transition-transform duration-500 
+        group-hover:translate-x-1 group-hover:bg-[#3ba6d7] relative z-10">
+                        Discover <li class="fa-solid fa-arrow-right text-white text-xs ml-2"></li>
+                    </button>
+                </a>
+            </div>
+
+
+            <!-- Service Card 5 (UI/UX Designing) -->
+            <div id="uiux" class="bg-[#242424] rounded-2xl shadow-lg p-6 relative group hover:-translate-y-2 transition-all duration-500 
+    shadow-[0_4px_12px_rgba(76,201,240,0.15)] hover:shadow-[0_14px_28px_rgba(76,201,240,0.2)] overflow-hidden">
+
+                <!-- Circle (hidden by default, only shows on hover) -->
+                <div
+                    class="absolute -top-16 -right-16 w-32 h-32 bg-[#4cc9f0]/10 rounded-full opacity-0 group-hover:opacity-100 group-hover:-top-8 group-hover:-right-8 transition-all duration-700 ease-out">
+                </div>
+
+                <div class="text-white text-4xl mb-4 p-4 rounded-xl bg-[#4cc9f0] inline-block 
+    shadow-[0_4px_12px_rgba(76,201,240,0.25)] 
+    transform transition-transform duration-500 group-hover:scale-105 group-hover:rotate-3 relative z-10">
+                    <i class="fa-solid fa-pencil-ruler"></i>
+                </div>
+
+                <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-[#4cc9f0] relative z-10">
+                    UI/UX Designing
+                </h3>
+                <p class="text-gray-300 mb-4 relative z-10">
+                    Create intuitive and visually stunning user interfaces and seamless user experiences for web and
+                    mobile applications.
+                </p>
+
+                <div class="flex justify-between items-center relative z-10">
+                    <span class="text-[#4cc9f0] font-semibold">Starting at $500</span>
+                </div>
+
+                <a href="details.html">
+                    <button class="bg-[#4cc9f0] px-5 py-3 rounded-full text-white text-sm 
+        shadow-[0_4px_12px_rgba(76,201,240,0.3)] mt-4 transform transition-transform duration-500 
+        group-hover:translate-x-1 group-hover:bg-[#3ba6d7] relative z-10">
+                        See More <li class="fa-solid fa-arrow-right text-white text-xs ml-2"></li>
+                    </button>
+                </a>
+            </div>
+
+            <!-- Service Card 6 (Video Editing) -->
+            <div id="videoediting" class="bg-[#242424] rounded-2xl shadow-lg p-6 relative group hover:-translate-y-2 transition-all duration-500 
+    shadow-[0_4px_12px_rgba(76,201,240,0.15)] hover:shadow-[0_14px_28px_rgba(76,201,240,0.2)] overflow-hidden">
+
+                <!-- Circle (hidden by default, only shows on hover) -->
+                <div
+                    class="absolute -top-16 -right-16 w-32 h-32 bg-[#4cc9f0]/10 rounded-full opacity-0 group-hover:opacity-100 group-hover:-top-8 group-hover:-right-8 transition-all duration-700 ease-out">
+                </div>
+
+                <div class="text-white text-4xl mb-4 p-4 rounded-xl bg-[#4cc9f0] inline-block 
+    shadow-[0_4px_12px_rgba(76,201,240,0.25)] 
+    transform transition-transform duration-500 group-hover:scale-105 group-hover:rotate-3 relative z-10">
+                    <i class="fa-solid fa-video"></i>
+                </div>
+
+                <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-[#4cc9f0] relative z-10">
+                    Video Editing
+                </h3>
+                <p class="text-gray-300 mb-4 relative z-10">
+                    Professional video editing services including cutting, transitions, effects, and color correction
+                    for all types of content.
+                </p>
+
+                <div class="flex justify-between items-center relative z-10">
+                    <span class="text-[#4cc9f0] font-semibold">Starting at $100</span>
+                </div>
+
+                <a href="details.html">
+                    <button class="bg-[#4cc9f0] px-5 py-3 rounded-full text-white text-sm 
+        shadow-[0_4px_12px_rgba(76,201,240,0.3)] mt-4 transform transition-transform duration-500 
+        group-hover:translate-x-1 group-hover:bg-[#3ba6d7] relative z-10">
+                        Try Now <li class="fa-solid fa-arrow-right text-white text-xs ml-2"></li>
+                    </button>
+                </a>
+            </div>
+
+
+
+        </div>
+
+        <!-- Stats Highlight (Agency Version) -->
+        <div class="px-2 sm:mx-8 xl:px-12">
+            <div class="container mx-auto grid lg:grid-cols-4 gap-8 mt-16 text-center bg-[#48b4d4] rounded-3xl py-3">
+                <div class="rounded-xl p-1">
+                    <div class="text-3xl font-bold text-white mb-2">500+</div>
+                    <div class="text-white">Projects Completed</div>
+                </div>
+                <div class="rounded-xl p-1">
+                    <div class="text-3xl font-bold text-white mb-2">300+</div>
+                    <div class="text-white">Happy Clients</div>
+                </div>
+                <div class="rounded-xl p-1">
+                    <div class="text-3xl font-bold text-white mb-2">24/7</div>
+                    <div class="text-white">Support Available</div>
+                </div>
+                <div class="rounded-xl p-1">
+                    <div class="text-3xl font-bold text-white mb-2">5+</div>
+                    <div class="text-white">Years Experience</div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section id="buy" class="pt-16">
+        <!-- Section Title -->
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-white">Buy Services</h2>
+            <div class="relative w-full mt-3 mb-5 h-[3px] flex justify-center items-center">
+                <!-- Gray full line -->
+                <div class="w-50 h-[1px] bg-gray-400"></div>
+                <!-- Center blue line -->
+                <div class="w-18 h-[4px] absolute bg-[#4cc9f0] rounded-full"></div>
+            </div>
+            <p class="text-gray-300 mt-2">Choose the service that best suits your business needs</p>
+        </div>
+
+        <div class="container mx-auto grid gap-8 md:grid-cols-1 px-4 sm:px-20 lg:grid-cols-3 xl:px-10 lg:px-0 lg:gap-5">
+
+            <!-- SEO Service -->
+            <div id="seo"
+                class="bg-[#242424] rounded-2xl lg:p-5 2xl:py-10 2xl:px-10 p-5 relative group transition-all duration-500 text-center sm:px-16 md:mx-16 lg:mx-0 lg:ml-3 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#122329]">
+                <!-- Icon -->
+                <div class="text-[#4cc9f0] text-2xl mb-10 p-4 rounded-xl bg-[#303131] inline-block shadow-md">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <!-- Title -->
+                <h3 class="text-3xl lg:text-3xl text-white font-semibold mb-8">SEO</h3>
+                <!-- Price -->
+                <div class="lg:text-2xl text-xl font-bold text-[#4cc9f0] mb-8">
+                    $500 <span class="text-xl lg:text-[18px] text-gray-500">/service</span>
+                </div>
+                <!-- Description -->
+                <p class="text-gray-300 mb-12 max-w-md mx-auto">
+                    Optimize your website to rank higher on search engines and attract organic traffic, boosting your
+                    online visibility.
+                </p>
+                <!-- Points -->
+                <ul class="space-y-4 mb-10 text-gray-300 text-left">
+                    <li class="flex items-center gap-2 mb-6"><i class="fa-solid fa-check text-[#4cc9f0]"></i>Keyword
+                        Research</li>
+                    <li class="flex items-center gap-2 mb-8"><i class="fa-solid fa-check text-[#4cc9f0]"></i>On-Page
+                        Optimization</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#4cc9f0]"></i>Link Building
+                        Strategy</li>
+                </ul>
+                <!-- Button -->
+                <div class="flex justify-center">
+                    <a href="#contact">
+                        <button
+                            class="bg-[#313030] text-[#4cc9f0] px-5 py-2.5 rounded-full text-sm flex items-center gap-2 transition-all duration-300 ease-in group hover:bg-[#4cc9f0] hover:text-[#E7F5F0]">
+                            Get Started
+                            <i
+                                class="fa-solid fa-arrow-right text-xs transition-all duration-300 ease-in group-hover:translate-x-0.5"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Web Development Service (Recommended) -->
+            <div id="webdev"
+                class="bg-[#2e3131] rounded-2xl relative lg:p-5 2xl:py-10 2xl:px-10 2xl:mx-5 xl:px-10 p-8 group transition-all duration-500 text-center hover:-translate-y-1 sm:px-16 md:mx-16 lg:mx-0 border border-2 border-[#4ccaf028] hover:shadow-2xl hover:shadow-[#122329]">
+
+                <!-- Recommended Badge -->
+                <div class="absolute -top-4 inset-x-0 flex justify-center">
+                    <div
+                        class="bg-[#4cc9f0] text-white lg:px-4 lg:py-1 px-4 py-1 rounded-full lg:text-[12px] text-[12px] font-semibold 2xl:py-1 2xl:px-5 2xl:text-[15px]">
+                        Recommended
+                    </div>
+                </div>
+
+                <!-- Icon -->
+                <div class="text-[#4cc9f0] text-2xl mb-10 p-4 rounded-xl bg-[#3e4646] inline-block shadow-md">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <!-- Title -->
+                <h3 class="text-3xl lg:text-3xl text-white font-semibold mb-8">Web Development</h3>
+                <!-- Price -->
+                <div class="lg:text-2xl text-xl font-bold text-[#4cc9f0] mb-8">
+                    $800 <span class="text-xl lg:text-[18px] text-gray-500">/service</span>
+                </div>
+                <!-- Description -->
+                <p class="text-gray-300 mb-12 max-w-md mx-auto">
+                    Build responsive, modern websites with cutting-edge technologies. Full-stack solutions to grow your
+                    business online.
+                </p>
+                <!-- Points -->
+                <ul class="space-y-4 mb-10 text-gray-300 text-left">
+                    <li class="flex items-center gap-2 mb-6"><i class="fa-solid fa-check text-[#4cc9f0]"></i>Responsive
+                        Design</li>
+                    <li class="flex items-center gap-2 mb-8"><i class="fa-solid fa-check text-[#4cc9f0]"></i>Custom Web
+                        Applications</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#4cc9f0]"></i>E-commerce
+                        Solutions</li>
+                </ul>
+                <!-- Button -->
+                <div class="flex justify-center">
+                    <a href="#contact">
+                        <button
+                            class="bg-[#4cc9f0] text-[#E7F5F0] px-5 py-2.5 rounded-full text-sm flex items-center gap-2 transition-all duration-300 ease-in group hover:bg-[#1da3e0]">
+                            Get Started
+                            <i
+                                class="fa-solid fa-arrow-right text-xs transition-all duration-300 ease-in group-hover:translate-x-0.5"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Video Editing Service -->
+            <div id="videoedit"
+                class="bg-[#242424] rounded-2xl lg:p-5 2xl:py-10 2xl:px-10 p-5 relative group transition-all duration-500 text-center sm:px-16 md:mx-16 lg:mx-0  hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#122329]">
+                <!-- Icon -->
+                <div class="text-[#4cc9f0] text-2xl mb-10 p-4 rounded-xl bg-[#303131] inline-block shadow-md">
+                    <i class="fa-solid fa-video"></i>
+                </div>
+                <!-- Title -->
+                <h3 class="text-3xl lg:text-3xl text-white font-semibold mb-8">Video Editing</h3>
+                <!-- Price -->
+                <div class="lg:text-2xl text-xl font-bold text-[#4cc9f0] mb-8">
+                    $300 <span class="text-xl lg:text-[18px] text-gray-500">/service</span>
+                </div>
+                <!-- Description -->
+                <p class="text-gray-300 mb-12 max-w-md mx-auto">
+                    Professional video editing services to create engaging content for social media, ads, and
+                    promotions.
+                </p>
+                <!-- Points -->
+                <ul class="space-y-4 mb-10 text-gray-300 text-left">
+                    <li class="flex items-center gap-2 mb-6"><i class="fa-solid fa-check text-[#4cc9f0]"></i>Social
+                        Media Clips</li>
+                    <li class="flex items-center gap-2 mb-8"><i class="fa-solid fa-check text-[#4cc9f0]"></i>Ad & Promo
+                        Editing</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#4cc9f0]"></i>High-Quality
+                        Output</li>
+                </ul>
+                <!-- Button -->
+                <div class="flex justify-center">
+                    <a href="#contact">
+                        <button
+                            class="bg-[#313030] text-[#4cc9f0] px-5 py-2.5 rounded-full text-sm flex items-center gap-2 transition-all duration-300 ease-in group hover:bg-[#4cc9f0] hover:text-[#E7F5F0]">
+                            Get Started
+                            <i
+                                class="fa-solid fa-arrow-right text-xs transition-all duration-300 ease-in group-hover:translate-x-0.5"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="faq" class="py-16 bg-[#0f0f0f] mt-10">
+        <!-- Section Title -->
+        <div class="text-center mb-12 sm:px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-white">Frequently Asked Questions</h2>
+            <div class="relative w-full mt-3 mb-5 h-[3px] flex justify-center items-center">
+                <!-- Gray full line -->
+                <div class="w-50 h-[1px] bg-gray-400"></div>
+                <!-- Center green line -->
+                <div class="w-18 h-[4px] absolute bg-[#4cc9f0] rounded-full"></div>
+            </div>
+            <p class="text-gray-300 mt-3 max-w-2xl mx-auto">
+                Common questions about our agency services answered for your ease.
+            </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+            <div class="space-y-4 sm:px-10">
+
+                <!-- FAQ Item -->
+                <div
+                    class="faq-item bg-[#2e3131] rounded-xl shadow-md overflow-hidden transition-all duration-300 border-2 border-[#4ccaf028] hover:border-l-[#4cc9f0] hover:border-l-[5px]  hover:shadow-2xl hover:drop-shadow-2xl">
+                    <button
+                        class="faq-btn w-full flex items-center justify-between px-6 py-4 text-left text-white font-medium group">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="bg-[#3c3f3f] rounded-full px-2 py-1 group-hover:bg-[#4cc9f0] transition-colors duration-300">
+                                <i
+                                    class="fa-regular fa-circle-question text-[#4cc9f0] group-hover:text-white text-xl"></i>
+                            </div>
+                            <span class="group-hover:text-[#4cc9f0] transition-colors duration-300">What services does
+                                your agency offer?</span>
+                        </div>
+                        <div
+                            class="icon-box bg-[#3c3f3f] text-[#4cc9f0] px-2 py-1 rounded-full text-[10px] group-hover:bg-[#4cc9f0] transition-colors duration-300">
+                            <i
+                                class="fa-solid fa-plus icon transition-transform duration-300 group-hover:text-white"></i>
+                        </div>
+                    </button>
+                    <div
+                        class="faq-content px-6 pb-0 text-gray-300 max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        We provide services including SEO, Web Development, Video Editing, and digital marketing
+                        solutions to help grow your business.
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div
+                    class="faq-item bg-[#2e3131] rounded-xl shadow-md overflow-hidden transition-all duration-300 border border-2 border-[#4ccaf028] hover:border-l-[#4cc9f0] hover:border-l-[5px] hover:shadow-2xl hover:drop-shadow-2xl">
+                    <button
+                        class="faq-btn w-full flex items-center justify-between px-6 py-4 text-left text-white font-medium group">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="bg-[#3c3f3f] rounded-full px-2 py-1 group-hover:bg-[#4cc9f0] transition-colors duration-300">
+                                <i
+                                    class="fa-regular fa-circle-question text-[#4cc9f0] group-hover:text-white text-xl"></i>
+                            </div>
+                            <span class="group-hover:text-[#4cc9f0] transition-colors duration-300">How can I request a
+                                Web Development project?</span>
+                        </div>
+                        <div
+                            class="icon-box bg-[#3c3f3f] text-[#4cc9f0] px-2 py-1 rounded-full text-[10px] group-hover:bg-[#4cc9f0] transition-colors duration-300">
+                            <i
+                                class="fa-solid fa-plus icon transition-transform duration-300 group-hover:text-white"></i>
+                        </div>
+                    </button>
+                    <div
+                        class="faq-content px-6 pb-0 text-gray-300 max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        Simply contact us through our website form or email with your project details and requirements.
+                        We will provide a custom quote and timeline.
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div
+                    class="faq-item bg-[#2e3131] rounded-xl shadow-md overflow-hidden transition-all duration-300 border border-2 border-[#4ccaf028] hover:border-l-[#4cc9f0] hover:border-l-[5px] hover:shadow-2xl hover:drop-shadow-2xl">
+                    <button
+                        class="faq-btn w-full flex items-center justify-between px-6 py-4 text-left text-white font-medium group">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="bg-[#3c3f3f] rounded-full px-2 py-1 group-hover:bg-[#4cc9f0] transition-colors duration-300">
+                                <i
+                                    class="fa-regular fa-circle-question text-[#4cc9f0] group-hover:text-white text-xl"></i>
+                            </div>
+                            <span class="group-hover:text-[#4cc9f0] transition-colors duration-300">What is the typical
+                                timeline for a project?</span>
+                        </div>
+                        <div
+                            class="icon-box bg-[#3c3f3f] text-[#4cc9f0] px-2 py-1 rounded-full text-[10px] group-hover:bg-[#4cc9f0] transition-colors duration-300">
+                            <i
+                                class="fa-solid fa-plus icon transition-transform duration-300 group-hover:text-white"></i>
+                        </div>
+                    </button>
+                    <div
+                        class="faq-content px-6 pb-0 text-gray-300 max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        Project timelines vary by service, but SEO typically takes 4-6 weeks, Web Development 6-12
+                        weeks, and Video Editing 3-7 days depending on complexity.
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div
+                    class="faq-item bg-[#2e3131] rounded-xl shadow-md overflow-hidden transition-all duration-300 border border-2 border-[#4ccaf028] hover:border-l-[#4cc9f0] hover:border-l-[5px] hover:shadow-2xl hover:drop-shadow-2xl">
+                    <button
+                        class="faq-btn w-full flex items-center justify-between px-6 py-4 text-left text-white font-medium group">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="bg-[#3c3f3f] rounded-full px-2 py-1 group-hover:bg-[#4cc9f0] transition-colors duration-300">
+                                <i
+                                    class="fa-regular fa-circle-question text-[#4cc9f0] group-hover:text-white text-xl"></i>
+                            </div>
+                            <span class="group-hover:text-[#4cc9f0] transition-colors duration-300">Can I get support
+                                after my project is completed?</span>
+                        </div>
+                        <div
+                            class="icon-box bg-[#3c3f3f] text-[#4cc9f0] px-2 py-1 rounded-full text-[10px] group-hover:bg-[#4cc9f0] transition-colors duration-300">
+                            <i
+                                class="fa-solid fa-plus icon transition-transform duration-300 group-hover:text-white"></i>
+                        </div>
+                    </button>
+                    <div
+                        class="faq-content px-6 pb-0 text-gray-300 max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        Yes! We provide ongoing support and maintenance for Web Development and SEO projects, and
+                        revisions for Video Editing projects if required.
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div
+                    class="faq-item bg-[#2e3131] rounded-xl shadow-md overflow-hidden transition-all duration-300 border border-2 border-[#4ccaf028] hover:border-l-[#4cc9f0] hover:border-l-[5px] hover:shadow-2xl hover:drop-shadow-2xl">
+                    <button
+                        class="faq-btn w-full flex items-center justify-between px-6 py-4 text-left text-white font-medium group">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="bg-[#3c3f3f] rounded-full px-2 py-1 group-hover:bg-[#4cc9f0] transition-colors duration-300">
+                                <i
+                                    class="fa-regular fa-circle-question text-[#4cc9f0] group-hover:text-white text-xl"></i>
+                            </div>
+                            <span class="group-hover:text-[#4cc9f0] transition-colors duration-300">Do you offer custom
+                                packages for agencies?</span>
+                        </div>
+                        <div
+                            class="icon-box bg-[#3c3f3f] text-[#4cc9f0] px-2 py-1 rounded-full text-[10px] group-hover:bg-[#4cc9f0] transition-colors duration-300">
+                            <i
+                                class="fa-solid fa-plus icon transition-transform duration-300 group-hover:text-white"></i>
+                        </div>
+                    </button>
+                    <div
+                        class="faq-content px-6 pb-0 text-gray-300 max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        Absolutely! We create custom packages based on your specific business requirements and budget
+                        for all our services.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <div>
+
+
+
+        <section id="call-to-action" class="relative py-16 ">
+            <div class="container mx-auto">
+                <div class="bg-[#242424] rounded-2xl shadow-lg overflow-hidden relative">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                        <!-- Image Section -->
+                        <div class="relative flex items-center justify-center p-4 sm:p-8 group transition-all duration-300 ease-in-out hover:scale-[1.02]
+">
+
+                            <!-- Responsive Image -->
+                            <img src="assets/content.png" alt="Illustration"
+                                class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg  xl:max-w-xl rounded-xl object-contain">
+
+                            <!-- Floating Elements -->
+                            <!-- Rating Badge -->
+                            <div
+                                class="absolute top-3 sm:top-6 right-3 sm:right-6 bg-white shadow-lg px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm flex items-center gap-1 sm:gap-2 animate-bounce-slow lg:top-36 xl:top-20 2xl:top-14">
+                                <i class="fa fa-star text-yellow-400"></i>
+                                <span>4.9 Rating</span>
+                            </div>
+
+                            <!-- Users Badge -->
+                            <div
+                                class="absolute bottom-3 sm:bottom-6 left-3 sm:left-6 bg-white shadow-lg px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm flex items-center gap-1 sm:gap-2 animate-bounce-slow lg:bottom-36 xl:bottom-20 2xl:bottom-14">
+                                <i class="fa-solid fa-users text-blue-500"></i>
+                                <span>1k+ Clients</span>
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="p-8 lg:p-12 sm:px-14">
+
+                            <span
+                                class="text-sm font-semibold px-4 py-1 rounded-full bg-[#3c3f3f] text-[#4cc9f0] uppercase">
+                                Premium Offer
+                            </span>
+
+                            <h2 class="mt-6 mb-4 text-3xl font-bold text-white">
+                                Boost Your Business With Our Digital Solutions
+                            </h2>
+                            <p class="mb-6 text-gray-300">
+                                Our agency specializes in SEO, Web Development, and Video Editing services to help your
+                                brand
+                                grow online, attract more clients, and increase revenue. Experience cutting-edge
+                                strategies
+                                designed for measurable results.
+                            </p>
+
+                            <!-- Benefits -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                                <div class="flex items-start space-x-3">
+                                    <div class="text-xl text-white bg-[#4cc9f0] rounded-lg py-1 px-2">
+                                        <i class="fa-solid fa-bolt"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold text-white">Fast Results</h5>
+                                        <p class="text-sm text-gray-300">Grow your online presence quickly with our
+                                            strategies.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-3">
+                                    <div class="text-2xl text-white bg-[#4cc9f0] rounded-lg py-1 px-2">
+                                        <i class="fa-solid fa-shield"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold text-white">Reliable Support</h5>
+                                        <p class="text-sm text-gray-300">Our team provides continuous guidance and
+                                            assistance to ensure your campaigns succeed.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="flex items-center gap-4 flex-wrap sm:flex-nowrap sm:gap-6">
+                                <a href="register.html"
+                                    class="px-6 py-3 rounded-lg font-semibold text-white bg-[#4cc9f0] hover:bg-[#3aa0d6]  lg:w-auto w-full text-center transition-all duration-[300ms] ease-in">
+                                    Get Started
+                                </a>
+                                <a href="#about"
+                                    class="px-6 py-3 rounded-lg font-semibold hover:bg-[#96e6ff34] border-[2px]  lg:w-auto w-full text-center transition-all duration-[300ms] ease-in"
+                                    style="border-color:#4cc9f0; color:#4cc9f0;">
+                                    Learn More
+                                </a>
+                            </div>
+
+                            <div class="flex items-center gap-2 text-gray-600 text-sm mt-5">
+                                <div
+                                    class="bg-[#4cc9f0] rounded-full border-dotted border-white border-[3px] px-2 py-1">
+                                    <i class="fa-solid fa-check text-white"></i>
+                                </div>
+                                <span class="text-white font-semibold">Satisfaction Guaranteed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-16 ">
+            <div class="container mx-auto px-4">
+                <!-- Title -->
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white">What Our Clients Say</h2>
+                    <div class="relative w-full mt-3 mb-5 h-[3px] flex justify-center items-center">
+                        <!-- Gray full line -->
+                        <div class="w-50 h-[1px] bg-gray-400"></div>
+                        <!-- Center blue line -->
+                        <div class="w-18 h-[4px] absolute bg-[#4cc9f0] rounded-full"></div>
+                    </div>
+                    <p class="text-gray-300 mt-2">Trusted by businesses and professionals worldwide</p>
+                </div>
+
+                <!-- Glide Slider -->
+                <div class="glide">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+
+                            <!-- Testimonial Item -->
+                            <li class="glide__slide">
+                                <div class="bg-[#242424] shadow-md rounded-xl p-6 text-center">
+                                    <p class="text-gray-300 italic mb-4 bg-[#272929] p-2">
+                                        <i class="fa-solid fa-quote-left text-[#4cc9f0] mr-2"></i>
+                                        MR.ST Agency helped us revamp our brand identity and grow our online presence
+                                        exponentially.
+                                        <i class="fa-solid fa-quote-right text-[#4cc9f0] ml-2"></i>
+                                    </p>
+                                    <img src="assets/Sara Wilsson.webp" alt="client"
+                                        class="w-16 h-16 rounded-full mx-auto mb-3">
+                                    <h3 class="font-bold text-gray-300">Sara Wilsson</h3>
+                                    <h4 class="text-sm text-[#4cc9f0]">Entrepreneur</h4>
+                                </div>
+                            </li>
+
+                            <!-- Testimonial Item -->
+                            <li class="glide__slide">
+                                <div class="bg-[#242424] shadow-md rounded-xl p-6 text-center">
+                                    <p class="text-gray-300 italic mb-4 bg-[#272929] p-2">
+                                        <i class="fa-solid fa-quote-left text-[#4cc9f0] mr-2"></i>
+                                        Thanks to MR.ST Agency, our website traffic increased by 300% within months,
+                                        and our SEO ranking reached top positions.
+                                        <i class="fa-solid fa-quote-right text-[#4cc9f0] ml-2"></i>
+                                    </p>
+                                    <img src="assets/Jena Karlis.webp" alt="client"
+                                        class="w-16 h-16 rounded-full mx-auto mb-3">
+                                    <h3 class="font-bold text-gray-300">Jena Karlis</h3>
+                                    <h4 class="text-sm text-[#4cc9f0]">Business Owner</h4>
+                                </div>
+                            </li>
+
+                            <!-- Testimonial Item -->
+                            <li class="glide__slide">
+                                <div class="bg-[#242424] shadow-md rounded-xl p-6 text-center">
+                                    <p class="text-gray-300 italic mb-4 bg-[#272929] p-2">
+                                        <i class="fa-solid fa-quote-left text-[#4cc9f0] mr-2"></i>
+                                        Their web development solutions gave our brand a professional edge and boosted
+                                        conversions drastically.
+                                        <i class="fa-solid fa-quote-right text-[#4cc9f0] ml-2"></i>
+                                    </p>
+                                    <img src="assets/Matt Brandon.webp" alt="client"
+                                        class="w-16 h-16 rounded-full mx-auto mb-3">
+                                    <h3 class="font-bold text-gray-300">Matt Brandon</h3>
+                                    <h4 class="text-sm text-[#4cc9f0]">Freelancer</h4>
+                                </div>
+                            </li>
+
+                            <!-- Testimonial Item -->
+                            <li class="glide__slide">
+                                <div class="bg-[#242424] shadow-md rounded-xl p-6 text-center">
+                                    <p class="text-gray-300 italic mb-4 bg-[#272929] p-2">
+                                        <i class="fa-solid fa-quote-left text-[#4cc9f0] mr-2"></i>
+                                        MR.ST Agency’s video editing services helped our marketing campaigns stand out
+                                        and gain massive engagement.
+                                        <i class="fa-solid fa-quote-right text-[#4cc9f0] ml-2"></i>
+                                    </p>
+                                    <img src="assets/John Larson.webp" alt="client"
+                                        class="w-16 h-16 rounded-full mx-auto mb-3">
+                                    <h3 class="font-bold text-gray-300">John Larson</h3>
+                                    <h4 class="text-sm text-[#4cc9f0]">Marketing Manager</h4>
+                                </div>
+                            </li>
+
+                            <!-- Testimonial Item -->
+                            <li class="glide__slide">
+                                <div class="bg-[#242424] shadow-md rounded-xl p-6 text-center">
+                                    <p class="text-gray-300 italic mb-4 bg-[#272929] p-2">
+                                        <i class="fa-solid fa-quote-left text-[#4cc9f0] mr-2"></i>
+                                        Working with MR.ST Agency is seamless. Their strategy, creativity, and execution
+                                        are unmatched.
+                                        <i class="fa-solid fa-quote-right text-[#4cc9f0] ml-2"></i>
+                                    </p>
+                                    <img src="assets/Saul Goodman.webp" alt="client"
+                                        class="w-16 h-16 rounded-full mx-auto mb-3">
+                                    <h3 class="font-bold text-gray-300">Saul Goodman</h3>
+                                    <h4 class="text-sm text-[#4cc9f0]">CEO & Founder</h4>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <!-- Pagination Dots -->
+                    <div class="flex justify-center mt-6" data-glide-el="controls[nav]">
+                        <button data-glide-dir="=0"></button>
+                        <button data-glide-dir="=1"></button>
+                        <button data-glide-dir="=2"></button>
+                        <button data-glide-dir="=3"></button>
+                        <button data-glide-dir="=4"></button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Team Section -->
+        <section id="team" class="py-16">
+            <div class="container mx-auto px-4">
+                <!-- Section Title -->
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white">Our Team</h2>
+                    <div class="relative w-full mt-3 mb-5 h-[3px] flex justify-center items-center">
+                        <!-- Gray full line -->
+                        <div class="w-50 h-[1px] bg-gray-400"></div>
+                        <!-- Center blue line -->
+                        <div class="w-18 h-[4px] absolute bg-[#4cc9f0] rounded-full"></div>
+                    </div>
+                    <p class="text-gray-300 mt-2">Meet the dedicated professionals behind MR.ST Agency</p>
+                </div>
+
+                <!-- Swiper Slider -->
+                <div class="swiper bank-team-swiper">
+                    <div class="swiper-wrapper">
+
+                        <!-- CEO -->
+                        <div class="swiper-slide" id="ceo">
+                            <div class="bg-[#242424] rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                                <div class="relative group">
+                                    <img src="assets/CEO.png" alt="Mr. Salman Tahir" class="">
+                                    <div
+                                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+                                        <div class="flex space-x-2">
+                                            <a href="#"
+                                                class="text-white text-xl bg-[#4cc9f0] rounded-full py-1 px-2 hover:bg-[#36a8e0] transition-all duration-[300ms] ease-in hover:-translate-y-1"><i
+                                                    class="fab fa-twitter"></i></a>
+                                            <a href="#"
+                                                class="text-white text-xl bg-[#4cc9f0] rounded-full py-1 px-3 hover:bg-[#36a8e0] transition-all duration-[300ms] ease-in hover:-translate-y-1"><i
+                                                    class="fab fa-facebook-f"></i></a>
+                                            <a href="#"
+                                                class="text-white text-xl bg-[#4cc9f0] rounded-full py-1 px-2 hover:bg-[#36a8e0] transition-all duration-[300ms] ease-in hover:-translate-y-1"><i
+                                                    class="fab fa-instagram"></i></a>
+                                            <a href="#"
+                                                class="text-white text-xl bg-[#4cc9f0] rounded-full py-1 px-2 hover:bg-[#36a8e0] transition-all duration-[300ms] ease-in hover:-translate-y-1"><i
+                                                    class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-6 text-center">
+                                    <h3 class="font-semibold text-white">Mr. Salman Tahir</h3>
+                                    <span class="text-[#4cc9f0] text-sm">CEO</span>
+                                    <p class="text-gray-300 text-sm mt-3">Founder and visionary behind MR.ST Agency,
+                                        leading the company with innovation and excellence.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team Member 1 -->
+                        <div class="swiper-slide" id="zella">
+                            <div class="bg-[#242424]  rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                                <div class="relative group">
+                                    <img src="assets/zella.PNG" alt="Zella Sher" class="">
+                                </div>
+                                <div class="p-6 text-center">
+                                    <h3 class="font-semibold text-white">Zella</h3>
+                                    <span class="text-[#4cc9f0] text-sm">Team Member</span>
+                                    <p class="text-gray-300 text-sm mt-3">Assisting clients and managing daily
+                                        operations efficiently.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team Member 2 -->
+                        <div class="swiper-slide" id="va">
+                            <div class="bg-[#242424]  rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                                <div class="relative group">
+                                    <img src="assets/va.PNG" alt="VA" class="">
+                                </div>
+                                <div class="p-6 text-center">
+                                    <h3 class="font-semibold text-white">VA</h3>
+                                    <span class="text-[#4cc9f0] text-sm">Freelancer</span>
+                                    <p class="text-gray-300 text-sm mt-3">Specializes in creative content and marketing
+                                        solutions for our clients.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team Member 3 -->
+                        <div class="swiper-slide" id="zoya">
+                            <div class="bg-[#242424]  rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                                <div class="relative group">
+                                    <img src="assets/zoya.png" alt="Zoya Jutt" class="">
+                                </div>
+                                <div class="p-6 text-center">
+                                    <h3 class="font-semibold text-white">Zoya</h3>
+                                    <span class="text-[#4cc9f0] text-sm">Team Member</span>
+                                    <p class="text-gray-300 text-sm mt-3">Handling project management and client
+                                        coordination seamlessly.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team Member 4 -->
+                        <div class="swiper-slide" id="zahra">
+                            <div class="bg-[#242424] rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                                <div class="relative group">
+                                    <img src="assets/zahra.jpg" alt="Zahra Ansari" class="">
+                                </div>
+                                <div class="p-6 text-center">
+                                    <h3 class="font-semibold text-white">Zahra</h3>
+                                    <span class="text-[#4cc9f0] text-sm">Team Member</span>
+                                    <p class="text-gray-300 text-sm mt-3">Focuses on creative strategies and innovative
+                                        solutions for our agency projects.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team Member 5 -->
+                        <div class="swiper-slide" id="ayesha">
+                            <div class="bg-[#242424] rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                                <div class="relative group">
+                                    <img src="assets/ayesha.png" alt="Ayesha" class="">
+                                </div>
+                                <div class="p-6 text-center">
+                                    <h3 class="font-semibold text-white">Ayesha</h3>
+                                    <span class="text-[#4cc9f0] text-sm">Data Scientist & Full Stack Developer</span>
+                                    <p class="text-gray-300 text-sm mt-3">
+                                        Expert in Python, HTML5, Tailwind CSS, JS, React.js, Node.js, Express.js,
+                                        MongoDB, Data Visualization & Data Wrangling.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Team Member 6 -->
+                        <div class="swiper-slide" id="amara">
+                            <div class="bg-[#242424] rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                                <div class="relative group">
+                                    <img src="assets/amara.webp" alt="Member 6" class="">
+                                </div>
+                                <div class="p-6 text-center">
+                                    <h3 class="font-semibold text-white">Amara</h3>
+                                    <span class="text-[#4cc9f0] text-sm">Team Member</span>
+                                    <p class="text-gray-300 text-sm mt-3">Handles social media strategy and client
+                                        communications efficiently.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Pagination + Nav -->
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev text-[#4cc9f0]"></div>
+                    <div class="swiper-button-next text-[#4cc9f0]"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16">
+            <div class="max-w-[93rem] mx-auto px-4">
+                <!-- Section Title -->
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white">Contact Us</h2>
+                    <div class="relative w-full mt-3 mb-5 h-[3px] flex justify-center items-center">
+                        <!-- Gray full line -->
+                        <div class="w-50 h-[1px] bg-gray-400"></div>
+                        <!-- Center green line -->
+                        <div class="w-18 h-[4px] absolute bg-[#4cc9f0] rounded-full"></div>
+                    </div>
+                    <p class="text-gray-300 mt-2">
+                        Get in touch with our Agency experts to discuss your projects, Data Science solutions, and
+                        full-stack development needs.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-10 sm:px-5 md:px-10">
+
+                    <!-- Map -->
+                    <div class="w-full h-96 lg:h-full rounded-xl overflow-hidden shadow-md 2xl:w-full">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus"
+                            class="w-full h-full border-0" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+
+                    <!-- Contact Content -->
+                    <div class="flex flex-col justify-center">
+
+                        <!-- Contact Cards -->
+                        <div class="grid sm:grid-cols-1 gap-6 mb-8 2xl:grid-cols-2 2xl:gap-8">
+
+                            <div
+                                class="flex items-start space-x-4 bg-[#242424] shadow-md p-5 rounded-xl transition-all duration-[300ms] ease-in hover:shadow-2xl hover:shadow-[#122329] hover:-translate-y-1 2xl:w-80">
+                                <div
+                                    class="w-20 h-12 flex items-center justify-center rounded-full bg-[#3e4646] text-[#4cc9f0] text-xl">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white">Location</h4>
+                                    <p class="text-gray-300 text-sm">8721 Broadway Avenue, New York, NY 10023</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex items-start space-x-4 bg-[#242424] shadow-md p-5 rounded-xl transition-all duration-[300ms] ease-in hover:shadow-2xl hover:shadow-[#122329] hover:-translate-y-1 2xl:w-80">
+                                <div
+                                    class="w-12 h-12 flex items-center justify-center rounded-full bg-[#3e4646] text-[#4cc9f0] text-xl">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white">Email</h4>
+                                    <p class="text-gray-300 text-sm">support@bankservices.com</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex items-start space-x-4 bg-[#242424] shadow-md p-5 rounded-xl transition-all duration-[300ms] ease-in hover:shadow-2xl hover:shadow-[#122329] hover:-translate-y-1 2xl:w-80">
+                                <div
+                                    class="w-12 h-12 flex items-center justify-center rounded-full bg-[#3e4646] text-[#4cc9f0] text-xl">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white">Call</h4>
+                                    <p class="text-gray-300 text-sm">+1 (212) 555-7890</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex items-start space-x-4 bg-[#242424] shadow-md p-5 rounded-xl transition-all duration-[300ms] ease-in hover:shadow-2xl hover:shadow-[#122329] hover:-translate-y-1 2xl:w-80">
+                                <div
+                                    class="w-12 h-12 flex items-center justify-center rounded-full bg-[#3e4646] text-[#4cc9f0] text-xl">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white">Open Hours</h4>
+                                    <p class="text-gray-300 text-sm">Mon - Fri: 9AM - 6PM</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Contact Form -->
+                        <div class="bg-[#242424] shadow-md rounded-xl p-6">
+                            <h3
+                                class="text-xl font-bold text-white mb-2 border-l-[3px] border-[#4cc9f0] p-2 bg-[#1a49572d]">
+                                Get in Touch</h3>
+                            <p class="text-gray-300 mb-6">Have questions about our banking services? Send us a
+                                message and we’ll respond shortly.</p>
+                            <!-- IMPORTANT -->
+                            <!-- Form action "#" add backend script URL for send msg-->
+                            <!-- Example: "sendmail.php" OR EmailJS integration -->
+                            <!-- setup gmail (to PHP/Node/EmailJS ) -->
+                            <form action="sendmail.php" method="post" class="space-y-4">
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <input type="text" name="name" placeholder="Your Name"
+                                        class="text-white w-full border border-gray-300 rounded-lg px-4 py-2 bg-[#272c2c] focus:ring-2 focus:ring-[#4cc9f0] focus:outline-none"
+                                        required>
+                                    <input type="email" name="email" placeholder="Your Email"
+                                        class="text-white w-full border border-gray-300 rounded-lg px-4 py-2 bg-[#272c2c] focus:ring-2 focus:ring-[#4cc9f0] focus:outline-none"
+                                        required>
+                                </div>
+                                <input type="text" name="subject" placeholder="Subject"
+                                    class="text-white w-full border border-gray-300 rounded-lg px-4 py-2 bg-[#272c2c] focus:ring-2 focus:ring-[#4cc9f0] focus:outline-none"
+                                    required>
+                                <textarea rows="5" name="message" placeholder="Message"
+                                    class="text-white w-full border border-gray-300 rounded-lg px-4 py-2 bg-[#272c2c] focus:ring-2 focus:ring-[#4cc9f0] focus:outline-none"
+                                    required></textarea>
+
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-4">
+                                    <button type="submit"
+                                        class="bg-[#4cc9f0] text-white px-7 py-2.5 font-bold rounded-full shadow hover:bg-[#3ea7c7] transition-all duration-[200ms] ease-in hover:-translate-y-0.5">
+                                        Send Message
+                                    </button>
+                                    <div class="flex space-x-2 text-xl text-gray-600 ">
+                                        <a href="#"
+                                            class="hover:text-white py-1 px-2 bg-transparent hover:bg-[#4cc9f0] hover:py-1 hover:px-2 hover:rounded-full transition-all duration-[200ms] ease-in hover:-translate-y-0.5 -mr-0.5"><i
+                                                class="fa-brands fa-twitter"></i></a>
+                                        <a href="#"
+                                            class="hover:text-white py-1 px-2 bg-transparent hover:bg-[#4cc9f0] hover:py-1 hover:px-2 hover:rounded-full transition-all duration-[200ms] ease-in hover:-translate-y-0.5"><i
+                                                class="fa-brands fa-facebook"></i></a>
+                                        <a href="#"
+                                            class="hover:text-white py-1 px-2 bg-transparent hover:bg-[#4cc9f0] hover:py-1 hover:px-2 hover:rounded-full transition-all duration-[200ms] ease-in hover:-translate-y-0.5"><i
+                                                class="fa-brands fa-instagram"></i></a>
+                                        <a href="#"
+                                            class="hover:text-white py-1 px-2 bg-transparent hover:bg-[#4cc9f0] hover:py-1 hover:px-2 hover:rounded-full transition-all duration-[200ms] ease-in hover:-translate-y-0.5"><i
+                                                class="fa-brands fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="bg-black text-gray-300 pt-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-10 lg:px-20 2xl:px-0 ">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-10 ">
+
+
+                    <!-- About Section -->
+                    <div class="">
+                        <div class="flex -ml-3">
+                            <img src="assets/logo.PNG" alt="Mr.St Logo" class="lg:h-14  h-14 ">
+                            <span class="text-4xl font-bold -ml-3 mt-3 text-white">.ST</span>
+                        </div>
+                        <p class="text-sm leading-relaxed md:text-xl">
+                            Creative Agency is your trusted partner for innovative solutions, strategy, and brand
+                            growth. Stay ahead with the latest trends, campaigns, and insights to elevate your brand's
+                            impact.
+                        </p>
+
+                        <div class="flex space-x-4 mt-4">
+                            <a href="#"
+                                class="hover:text-[#4cc9f0] border-[1px] border-gray-200 hover:border-[#4cc9f0] rounded-full px-2 py-1 transition-all duration-[200px] ease-in -mr-0.5"><i
+                                    class="fa-brands fa-twitter"></i></a>
+                            <a href="#"
+                                class="hover:text-[#4cc9f0] border-[1px] border-gray-200 hover:border-[#4cc9f0] rounded-full px-2 py-1 transition-all duration-[200px] ease-in"><i
+                                    class="fa-brands fa-facebook"></i></a>
+                            <a href="#"
+                                class="hover:text-[#4cc9f0] border-[1px] border-gray-200 hover:border-[#4cc9f0] rounded-full px-2 py-1 transition-all duration-[200px] ease-in"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="#"
+                                class="hover:text-[#4cc9f0] border-[1px] border-gray-200 hover:border-[#4cc9f0] rounded-full px-2 py-1 transition-all duration-[200px] ease-in"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div
+                        class="sm:flex sm:gap-14 grid sm:space-y-0 space-y-5 md:grid md:grid-cols-2 lg:flex lg:gap-30 xl:gap-36">
+                        <!-- Useful Links -->
+                        <div class="sm:none text-center lg:text-left">
+                            <h4 class="text-white text-lg font-semibold mb-4 border-l-[3px] border-[#4cc9f0] pl-2">
+                                Useful Links</h4>
+                            <ul class="space-y-2">
+                                <li><a href="#home"
+                                        class="hover:text-[#4cc9f0] transition-all duration-[200px] ease-in">Home</a>
+                                </li>
+                                <li><a href="#about"
+                                        class="hover:text-[#4cc9f0] transition-all duration-[200px] ease-in">About
+                                        Us</a></li>
+                                <li><a href="#services"
+                                        class="hover:text-[#4cc9f0] transition-all duration-[200px] ease-in">Services</a>
+                                </li>
+                                <li><a href="#team"
+                                        class="hover:text-[#4cc9f0] transition-all duration-[200px] ease-in">Team
+                                        of Service</a></li>
+                                <li><a href="#reviews"
+                                        class="hover:text-[#4cc9f0] transition-all duration-[200px] ease-in">Reviews</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Services -->
+                        <div class="lg:flex lg:gap-28 xl:gap-32">
+                            <div class="sm:none text-center">
+                                <h4 class="text-white text-lg font-semibold mb-4 border-l-[3px] border-[#4cc9f0] pl-2">
+                                    Our
+                                    Services</h4>
+                                <ul class="space-y-2">
+                                    <li><a href="#onpage"
+                                            class="hover:text-[#4cc9f0] transition-all duration-[200px] ease-in">Full
+                                            SEO Optimization</a></li>
+                                    <li><a href="#offpage"
+                                            class="hover:text-[#4cc9f0] transition-all duration-[200px] ease-in">OffPage
+                                            SEO</a></li>
+                                    <li><a href="#cybersecurity"
+                                            class="hover:text-[#4cc9f0] transition-all duration-[200px] ease-in">Cyber
+                                            Security</a></li>
+                                    <li><a href="#fullstackdevelopment"
+                                            class="hover:text-[#4cc9f0] transition-all duration-[200px] ease-in">Full
+                                            Stack Development</a></li>
+                                    <li><a href="#datascience"
+                                            class="hover:text-[#4cc9f0] transition-all duration-[200px] ease-in">Data
+                                            Science</a></li>
+                                </ul>
+                            </div>
+                            <div class="grid text-center content-center md:hidden lg:block">
+                                <div>
+                                    <h4 class="text-white text-lg font-semibold">
+                                        Contact Us</h4>
+                                    <p>Pakistan, Islamabad</p>
+                                    <p class=""><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+                                    <p><strong>Email:</strong> <span
+                                            class="text-[#4cc9f0] cursor-pointer hover:text-[#389fbe] transition-all duration-200 ease">mr.st@agency.com</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Contact -->
+                        <div class="hidden grid text-center content-center md:hidden lg:hidden">
+                            <div>
+                                <h4 class="text-white text-lg font-semibold">
+                                    Contact Us</h4>
+                                <p>Pakistan Islamabad</p>
+                                <p class=""><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+                                <p><strong>Email:</strong> <span
+                                        class="text-[#4cc9f0] cursor-pointer hover:text-[#389fbe] transition-all duration-200 ease">mr.st@agency.com</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- Bottom bar -->
+            <div class=" mt-10 pt-6 pb-6 text-center text-sm text-gray-400 bg-[#1a49572d] h-full">
+                © 2025 <span class="text-[#4cc9f0] font-bold">MR.ST</span>. All Rights Reserved.
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+</body>
+
+</html>

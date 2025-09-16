@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/logo.PNG" class="h-5">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Service Details</title>
+</head>
+
+<body class="bg-[#0f0f0f] text-black transition-colors duration-500">
+
+  <!-- Scroll Button --> <button id="scrollBtn"
+    class="fixed bottom-6 left-6 w-12 h-12 flex items-center justify-center rounded-full bg-[#4cc9f0] text-white shadow-lg hover:bg-[#338097] transform hover:-translate-y-1 transition duration-300 z-50">
+    <i id="scrollIcon" class="fa-solid fa-arrow-down"></i> </button>
+
+  <!-- Banner Section -->
+  <div class="relative h-[300px] sm:h-[280px] lg:h-[300px] w-full">
+    <!-- Background Image -->
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/hom.jpg');"></div>
+
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 bg-black/80"></div>
+
+    <!-- Navbar -->
+    <div id="navbar"
+      class="w-full py-3 flex items-center justify-between relative z-20 sm:justify-between px-5 lg:px-10 2xl:px-10 sticky top-0 bg-transparent transition-all duration-300">
+
+      <!-- Left Logo -->
+      <div class="flex">
+        <img src="assets/logo.PNG" alt="Mr.St Logo" class="lg:h-14  h-14 ml-0 ">
+        <span class="text-4xl font-bold -ml-3 mt-3 text-white">.ST</span>
+      </div>
+
+      <!-- Hamburger Icon (Mobile) -->
+      <button id="menuBtn" class="sm:block md:block lg:hidden relative w-7 h-7 ml-auto">
+        <!-- Hamburger -->
+        <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+          class="absolute top-0 left-0 w-7 h-7 text-white transition-all duration-[300ms] ease">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <!-- Cross -->
+        <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+          class="absolute top-0 left-0 w-7 h-7 text-white opacity-0 rotate-90 transition-all duration-[300ms] ease">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden lg:flex gap-6 items-center text-white">
+        <ul class="flex gap-6 items-center text-white">
+
+          <li><a href="index.html#home"
+              class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Home</a>
+          </li>
+          <li><a href="index.html#about"
+              class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">About</a>
+          </li>
+
+          <!-- Services -->
+          <li class="relative" id="servicesTrigger">
+            <a href="javascript:void(0)"
+              class="flex items-center gap-1 nav-link hover:text-[#4cc9f0] transition-all duration-[100ms] ease">
+              Services
+              <svg id="servicesIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-4 h-4 transition-transform">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+              </svg>
+            </a>
+            <ul id="servicesMenu"
+              class="absolute -left-40 mt-2 hidden border border-gray-700 rounded-xl shadow-md p-5 w-[250px] space-y-2 bg-white/20 backdrop-blur">
+              <li><a href="index.html#onpage" class="nav-link hover:text-[#4cc9f0]">Full SEO Optimization</a></li>
+              <li><a href="index.html#datascience" class="nav-link hover:text-[#4cc9f0]">Data Science</a></li>
+              <li><a href="index.html#cybersecurity" class="nav-link hover:text-[#4cc9f0]">Cyber Security</a></li>
+              <li><a href="index.html#fullstackdevelopment" class="nav-link hover:text-[#4cc9f0]">Full Stack
+                  Development</a></li>
+              <li><a href="index.html#uiux" class="nav-link hover:text-[#4cc9f0]">UI/UX Designing</a></li>
+              <li><a href="index.html#videoediting" class="nav-link hover:text-[#4cc9f0]">Video Editing</a></li>
+            </ul>
+          </li>
+
+          <!-- Team -->
+          <li class="relative" id="teamTrigger">
+            <a href="javascript:void(0)"
+              class="flex items-center gap-1 nav-link hover:text-[#4cc9f0] transition-all duration-[100ms] ease">
+              Team
+              <svg id="teamIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-4 h-4 transition-transform">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+              </svg>
+            </a>
+            <ul id="teamMenu"
+              class="absolute left-0 mt-2 hidden border border-gray-700 rounded-xl shadow-md p-5 w-[250px] space-y-2 bg-white/20 backdrop-blur">
+              <li><a href="index.html#ceo" class="nav-link hover:text-[#4cc9f0]">Mr.St (CEO Of Company)</a></li>
+
+              <!-- Sub dropdown inside Team -->
+              <li class="relative" id="subTeamTrigger">
+                <a href="javascript:void(0)"
+                  class="flex items-center gap-1 nav-link hover:text-[#4cc9f0] transition-all duration-[100ms] ease">
+                  More Members
+                  <svg id="subTeamIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" class="w-4 h-4 transition-transform">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                  </svg>
+                </a>
+                <ul id="subTeamMenu"
+                  class="absolute left-full top-0 ml-5 hidden border border-gray-700 rounded-xl shadow-md p-5 w-[250px] space-y-2 bg-white/30 backdrop-blur">
+                  <li><a href="index.html#professional" class="nav-link hover:text-[#4cc9f0]">Zella Sher.TM</a></li>
+                  <li><a href="index.html#ultimate" class="nav-link hover:text-[#4cc9f0]">VA Freelancer.TM</a></li>
+                  <li><a href="index.html#zoya" class="nav-link hover:text-[#4cc9f0]">Zoya Jutt.TM</a></li>
+                  <li><a href="index.html#zahra" class="nav-link hover:text-[#4cc9f0]">Zahra Ansari.TM</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="index.html#testimonials"
+              class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Reviews</a>
+          </li>
+          <li><a href="index.html#buy"
+              class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Buy</a>
+          </li>
+          <li><a href="index.html#contact"
+              class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Contact</a>
+          </li>
+      </nav>
+
+      <!-- Desktop Button -->
+      <a href="register.html" class="hidden lg:block">
+        <button
+          class="hidden lg:block text-white bg-gradient-to-br from-[#4cc9f0] via-[#4cc9f0] to-[#4cc9f0] hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-[#4cc9f0] dark:focus:ring-[#4cc9f0] font-medium rounded-full py-2 px-5 text-center cursor-pointer whitespace-nowrap transition hover:translate-y-0.5 duration-[200ms]  shadow-[0_0_25px_#33997a6e]">Click
+          Now</button>
+      </a>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+      class="lg:hidden hidden px-4 py-4 border border-transparent z-100 relative flex flex-col bg-black/60 backdrop-blur text-white justify-between">
+      <div class="">
+        <ul class="space-y-3">
+
+          <li><a href="#home"
+              class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Home</a>
+          </li>
+          <li><a href="#about"
+              class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">About</a>
+          </li>
+
+          <!-- Services (Mobile Dropdown) -->
+          <li>
+            <button onclick="toggleDropdown('servicesMenuMobile','servicesIconMobile', event)"
+              class="nav-link flex items-center gap-1 cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">
+              Services
+              <svg id="servicesIconMobile" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="2" stroke="currentColor" class="w-4 h-4 transition-transform">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+              </svg>
+            </button>
+
+            <ul id="servicesMenuMobile" class="hidden pl-4 mt-2 space-y-2">
+              <li><a href="#onpage"
+                  class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Full SEO
+                  Optimization</a></li>
+              <li><a href="#datascience"
+                  class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Data
+                  Science</a></li>
+              <li><a href="#cybersecurity"
+                  class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Cyber
+                  Security</a></li>
+              <li><a href="#fullstackdevelopment"
+                  class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Full
+                  Stack Development</a></li>
+              <li><a href="#uiux"
+                  class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">UI/UX
+                  Designing</a></li>
+              <li><a href="#videoediting"
+                  class="cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Video
+                  Editing</a></li>
+            </ul>
+
+          </li>
+
+          <!-- Team (Mobile Dropdown) -->
+          <li>
+            <button onclick="toggleDropdown('loansMenuMobile','loansIconMobile' ,event)"
+              class="nav-link flex items-center gap-1 cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">
+              Team
+              <svg id="loansIconMobile" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="2" stroke="currentColor" class="w-4 h-4 transition-transform">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+              </svg>
+            </button>
+            <ul id="loansMenuMobile" class="hidden pl-4 mt-2 space-y-2">
+              <li><a href="index.html#ceo"
+                  class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Mr.St (CEO
+                  Of Company)</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#testimonials"
+              class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Reviews</a>
+          </li>
+          <li><a href="#buy"
+              class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Buy</a>
+          </li>
+          <li><a href="#contact"
+              class="nav-link cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Center Button (Mobile) -->
+      <div>
+        <a href="register.html">
+          <button type="button" class="text-white bg-gradient-to-r from-[#4cc9f0] via-[#4cc9f0] to-[#4cc9f0] hover:bg-gradient-to-br focus:ring-2 focus:outline-none focus:ring-[#12a16acb] dark:focus:ring-[#4cc9f0]
+ font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 cursor-pointer whitespace-nowrap w-full mt-5"
+            onclick="window.location.href='Loginform.html'">Click
+            Now</button>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Banner Text -->
+    <div
+      class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 sm:px-10 z-0 lg:mt-7 mt-10">
+      <h1 class="md:text-5xl font-bold mb-3 text-3xl">Service Details</h1>
+      <p class="text-lg sm:text-xl mb-4 max-w-2xl">
+        Grow your business, manage clients, boost digital presence, and access top-notch solutions with our full-service
+        agency expertise.
+      </p>
+      <div class="flex">
+        <a href="index.html" class="text-[#4cc9f0] hover:text-[#3c99b6] transition-all duration-200 ease-in">Home</a>
+        <span> <span class="text-gray-400">&nbsp;/</span> Service Details</span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Service Details Section -->
+  <section id="service-details" class="py-16">
+    <div class="container mx-auto px-4 sm:px-10 xl:px-20 grid lg:grid-cols-12 gap-8">
+
+      <!-- Left Content -->
+      <div class="lg:col-span-8 space-y-8">
+
+        <!-- Hero Image -->
+        <div class="relative">
+          <img src="assets/service.webp" alt="Agency Service" class="w-full rounded-2xl shadow-lg">
+          <div class="absolute top-4 left-4 bg-[#4cc9f0] text-white px-4 py-2 rounded-full text-sm font-semibold">
+            Premium Service
+          </div>
+        </div>
+
+        <!-- Service Header -->
+        <div>
+          <h2 class="text-3xl font-bold text-white mb-2 2xl:text-4xl">Full-Service Agency Solutions</h2>
+          <p class="text-gray-300 2xl:text-xl">
+            Grow your brand, manage clients, launch campaigns, and access a complete suite of professional services with
+            our expert agency solutions.
+          </p>
+        </div>
+
+
+        <!-- Features -->
+        <div>
+          <h4 class="text-xl font-semibold mb-4 2xl:text-2xl text-white">What You'll Get</h4>
+          <div class="grid md:grid-cols-2 gap-6">
+
+            <div
+              class="flex space-x-4 border-2 bg-[#242424] border-gray-800 hover:shadow-2xl hover:shadow-[#0f181b] p-3 rounded-xl hover:-translate-y-0.5 transition-all duration-[200ms] ease-in">
+              <div class="text-[#4cc9f0] text-3xl text-center bg-[#3e4646] rounded-full px-4 py-1 content-center">
+                <i class="fa-solid fa-briefcase"></i>
+              </div>
+              <div>
+                <h5 class="font-semibold text-white">Brand Strategy</h5>
+                <p class="text-gray-300 text-sm">Expert guidance to define and grow your brand presence effectively.</p>
+              </div>
+            </div>
+
+            <div
+              class="flex space-x-4 border-2 bg-[#242424] border-gray-800 hover:shadow-2xl hover:shadow-[#0f181b] p-3 rounded-xl hover:-translate-y-0.5 transition-all duration-[200ms] ease-in">
+              <div class="text-[#4cc9f0] text-3xl text-center bg-[#3e4646] rounded-full px-4 py-1 content-center">
+                <i class="fa-solid fa-bullhorn"></i>
+              </div>
+              <div>
+                <h5 class="font-semibold text-white">Marketing Campaigns</h5>
+                <p class="text-gray-300 text-sm">Plan and execute marketing campaigns that boost engagement and
+                  conversions.</p>
+              </div>
+            </div>
+
+            <div
+              class="flex space-x-4 border-2 bg-[#242424] border-gray-800 hover:shadow-2xl hover:shadow-[#0f181b] p-3 rounded-xl hover:-translate-y-0.5 transition-all duration-[200ms] ease-in">
+              <div class="text-[#4cc9f0] text-3xl text-center bg-[#3e4646] rounded-full px-4 py-1 content-center">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <div>
+                <h5 class="font-semibold text-white">Client Management</h5>
+                <p class="text-gray-300 text-sm">Organize and manage your clients efficiently for long-term business
+                  growth.</p>
+              </div>
+            </div>
+
+            <div
+              class="flex space-x-4 border-2 bg-[#242424] border-gray-800 hover:shadow-2xl hover:shadow-[#0f181b] p-3 rounded-xl hover:-translate-y-0.5 transition-all duration-[200ms] ease-in">
+              <div class="text-[#4cc9f0] text-3xl text-center bg-[#3e4646] rounded-full px-4 py-1 content-center">
+                <i class="fa-solid fa-lightbulb"></i>
+              </div>
+              <div>
+                <h5 class="font-semibold text-white">Creative Solutions</h5>
+                <p class="text-gray-300 text-sm">Innovative strategies and ideas tailored to grow your agency and
+                  clients.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!-- Process Steps -->
+        <div class="relative">
+          <h4 class="text-xl font-semibold mb-4 2xl:text-2xl text-white">Our Process</h4>
+          <div class="space-y-6 relative">
+
+            <!-- Vertical Line -->
+            <div class="absolute top-5 bottom-0 left-5 w-[2px] bg-[#4cc9f0]"></div>
+
+            <div class="flex space-x-4 relative z-10">
+              <div
+                class="flex-shrink-0 bg-[#4cc9f0] text-white w-10 h-10 flex items-center justify-center rounded-full font-bold">
+                01</div>
+              <div>
+                <h5 class="font-semibold text-white 2xl:text-xl">Client Discovery</h5>
+                <p class="text-gray-300 text-sm 2xl:text-[15px]">Understanding client goals, brand vision, and
+                  requirements to craft tailored strategies.</p>
+              </div>
+            </div>
+
+            <div class="flex space-x-4 relative z-10">
+              <div
+                class="flex-shrink-0 bg-[#4cc9f0] text-white w-10 h-10 flex items-center justify-center rounded-full font-bold">
+                02</div>
+              <div>
+                <h5 class="font-semibold text-white 2xl:text-xl">Strategic Planning</h5>
+                <p class="text-gray-300 text-sm 2xl:text-[15px]">Developing actionable marketing and branding strategies
+                  to maximize impact.</p>
+              </div>
+            </div>
+
+            <div class="flex space-x-4 relative z-10">
+              <div
+                class="flex-shrink-0 bg-[#4cc9f0] text-white w-10 h-10 flex items-center justify-center rounded-full font-bold">
+                03</div>
+              <div>
+                <h5 class="font-semibold text-white 2xl:text-xl">Creative Execution</h5>
+                <p class="text-gray-300 text-sm 2xl:text-[15px]">Implementing campaigns, design projects, and content
+                  strategies for clients.</p>
+              </div>
+            </div>
+
+            <div class="flex space-x-4 relative z-10">
+              <div
+                class="flex-shrink-0 bg-[#4cc9f0] text-white w-10 h-10 flex items-center justify-center rounded-full font-bold">
+                04</div>
+              <div>
+                <h5 class="font-semibold text-white 2xl:text-xl">Performance & Optimization</h5>
+                <p class="text-gray-300 text-sm 2xl:text-[15px]">Monitoring results, analyzing metrics, and optimizing
+                  campaigns for maximum ROI.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+        <!-- Gallery -->
+        <div>
+          <h4 class="text-xl font-semibold mb-4 text-white">Project Showcase</h4>
+          <div class="grid md:grid-cols-2 gap-4">
+            <img src="assets/saving.jpg" alt="" class="w-full h-64 object-cover rounded-lg shadow-md">
+            <img src="assets/money.jpg" alt="" class="w-full h-64 object-cover rounded-lg shadow-md">
+            <img src="assets/team.jpg" alt="" class="w-full h-64 object-cover rounded-lg shadow-md">
+            <img src="assets/bank.jpg" alt="" class="w-full h-64 object-cover rounded-lg shadow-md">
+          </div>
+        </div>
+
+
+      </div>
+
+      <!-- Right Sidebar -->
+      <div class="lg:col-span-4 space-y-8">
+
+        <!-- Services Menu -->
+        <div class="bg-[#242424] rounded-2xl border-1 border-gray-700 border p-6 space-y-4">
+          <h4 class="font-semibold text-white 2xl:text-xl">Our Services</h4>
+          <div class="space-y-2">
+            <a href="#"
+              class="flex items-center text-[#4cc9f0] font-semibold hover:text-[#3a99b6] transition-all duration-[200ms] ease-in hover:translate-x-1">
+              <i class="fa-solid fa-arrow-right mr-2"></i> Full SEO Optimization
+            </a>
+            <hr class="border-gray-600 border-1">
+            <a href="#"
+              class="flex items-center text-gray-300 font-semibold hover:text-[#4cc9f0] transition-all duration-[200ms] ease-in hover:translate-x-1">
+              <i class="fa-solid fa-arrow-right mr-2"></i> Data Science
+            </a>
+            <hr class="border-gray-600 border-1">
+            <a href="#"
+              class="flex items-center text-gray-300 font-semibold hover:text-[#4cc9f0] transition-all duration-[200ms] ease-in hover:translate-x-1">
+              <i class="fa-solid fa-arrow-right mr-2"></i> Cyber Security
+            </a>
+            <hr class="border-gray-600 border-1">
+            <a href="#"
+              class="flex items-center text-gray-300 font-semibold hover:text-[#4cc9f0] transition-all duration-[200ms] ease-in hover:translate-x-1">
+              <i class="fa-solid fa-arrow-right mr-2"></i> Full Stack Development
+            </a>
+            <hr class="border-gray-600 border-1">
+            <a href="#"
+              class="flex items-center text-gray-300 font-semibold hover:text-[#4cc9f0] transition-all duration-[200ms] ease-in hover:translate-x-1">
+              <i class="fa-solid fa-arrow-right mr-2"></i> Ui/Ux Designing
+            </a>
+            <hr class="border-gray-600 border-1">
+            <a href="#"
+              class="flex items-center text-gray-300 font-semibold hover:text-[#4cc9f0] transition-all duration-[200ms] ease-in hover:translate-x-1">
+              <i class="fa-solid fa-arrow-right mr-2"></i> Video Editing
+            </a>
+          </div>
+        </div>
+
+        <!-- Info Card -->
+        <div class="bg-[#242424] rounded-2xl border-1 border-gray-700 border p-6 space-y-4">
+          <h4 class="font-semibold text-white 2xl:text-xl">Service Details</h4>
+          <div class="space-y-2">
+            <div class="flex justify-between">
+              <span class="font-bold text-white">Duration:</span>
+              <span class="text-[#4cc9f0] font-bold">3-6 months</span>
+            </div>
+            <hr class="border-gray-600 border-1">
+            <div class="flex justify-between">
+              <span class="font-bold text-white">Team Size:</span>
+              <span class="text-[#4cc9f0] font-bold">4-6 specialists</span>
+            </div>
+            <hr class="border-gray-600 border-1">
+            <div class="flex justify-between">
+              <span class="font-bold text-white">Delivery:</span>
+              <span class="text-[#4cc9f0] font-bold">Bi-weekly reports</span>
+            </div>
+            <hr class="border-gray-600 border-1">
+            <div class="flex justify-between">
+              <span class="font-bold text-white">Support:</span>
+              <span class="text-[#4cc9f0] font-bold">24/7 monitoring</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Card -->
+        <div class="bg-[#3ba0be] rounded-2xl shadow-lg p-6 space-y-4">
+          <h4 class="font-semibold text-white 2xl:text-xl">Need Help?</h4>
+          <p class="text-white">Contact our banking experts anytime for assistance with accounts, loans, or deposits.
+          </p>
+          <div class="space-y-2">
+            <div class="flex items-center space-x-2 text-white">
+              <i class="fa-solid fa-phone"></i>
+              <span>+92 300 1234567</span>
+            </div>
+            <div class="flex items-center space-x-2 text-white">
+              <i class="fa-solid fa-envelope"></i>
+              <span>info@bankexample.com</span>
+            </div>
+          </div>
+          <a href="index.html#contact"
+            class="block bg-white text-[#4cc9f0] text-center py-3 rounded-full font-semibold mt-2 hover:bg-gray-200 transition-all duration-[200ms] ease-in hover:-translate-y-0.5">Get
+            Quote</a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-black text-gray-300 pt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-10 lg:px-20 2xl:px-0 ">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-10 ">
+
+
+        <!-- About Section -->
+        <div class="">
+          <div class="flex -ml-3">
+            <img src="assets/logo.PNG" alt="Mr.St Logo" class="lg:h-14  h-14 ">
+            <span class="text-4xl font-bold -ml-3 mt-3 text-white">.ST</span>
+          </div>
+          <p class="text-sm leading-relaxed md:text-xl">
+            Creative Agency is your trusted partner for innovative solutions, strategy, and brand growth. Stay ahead
+            with the latest trends, campaigns, and insights to elevate your brand's impact.
+          </p>
+
+          <div class="flex space-x-4 mt-4">
+            <a href="#"
+              class="hover:text-[#4cc9f0] border-[1px] border-gray-200 hover:border-[#4cc9f0] rounded-full px-2 py-1 transition-all duration-[200px] ease-in -mr-0.5"><i
+                class="fa-brands fa-twitter"></i></a>
+            <a href="#"
+              class="hover:text-[#4cc9f0] border-[1px] border-gray-200 hover:border-[#4cc9f0] rounded-full px-2 py-1 transition-all duration-[200px] ease-in"><i
+                class="fa-brands fa-facebook"></i></a>
+            <a href="#"
+              class="hover:text-[#4cc9f0] border-[1px] border-gray-200 hover:border-[#4cc9f0] rounded-full px-2 py-1 transition-all duration-[200px] ease-in"><i
+                class="fa-brands fa-instagram"></i></a>
+            <a href="#"
+              class="hover:text-[#4cc9f0] border-[1px] border-gray-200 hover:border-[#4cc9f0] rounded-full px-2 py-1 transition-all duration-[200px] ease-in"><i
+                class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="sm:flex sm:gap-14 grid sm:space-y-0 space-y-5 md:grid md:grid-cols-2 lg:flex lg:gap-30 xl:gap-36">
+          <!-- Useful Links -->
+          <div class="sm:none text-center lg:text-left">
+            <h4 class="text-white text-lg font-semibold mb-4 border-l-[3px] border-[#4cc9f0] pl-2">
+              Useful Links</h4>
+            <ul class="space-y-2">
+              <li><a href="#home" class="hover:text-[#4cc9f0] transition-all duration-[200px] ease-in">Home</a>
+              </li>
+              <li><a href="#about" class="hover:text-[#4cc9f0] transition-all duration-[200px] ease-in">About
+                  Us</a></li>
+              <li><a href="#services" class="hover:text-[#4cc9f0] transition-all duration-[200px] ease-in">Services</a>
+              </li>
+              <li><a href="#team" class="hover:text-[#4cc9f0] transition-all duration-[200px] ease-in">Team
+                  of Service</a></li>
+              <li><a href="#reviews" class="hover:text-[#4cc9f0] transition-all duration-[200px] ease-in">Reviews</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="lg:flex lg:gap-28 xl:gap-32">
+            <div class="sm:none text-center">
+              <h4 class="text-white text-lg font-semibold mb-4 border-l-[3px] border-[#4cc9f0] pl-2">
+                Our
+                Services</h4>
+              <ul class="space-y-2">
+                <li><a href="#onpage" class="hover:text-[#4cc9f0] transition-all duration-[200px] ease-in">Full
+                    SEO Optimization</a></li>
+                <li><a href="#datascience" class="hover:text-[#4cc9f0] transition-all duration-[200px] ease-in">Data
+                    Science</a></li>
+                <li><a href="#cybersecurity" class="hover:text-[#4cc9f0] transition-all duration-[200px] ease-in">Cyber
+                    Security</a></li>
+                <li><a href="#fullstackdevelopment"
+                    class="hover:text-[#4cc9f0] transition-all duration-[200px] ease-in">Full
+                    Stack Development</a></li>
+                <li><a href="index.html#uiux" class="hover:text-[#4cc9f0] transition-all duration-[200px] ease-in">Ui/Ux
+                    Designing</a></li>
+                <li><a href="index.html#videoediting"
+                    class="hover:text-[#4cc9f0] transition-all duration-[200px] ease-in">Video Editing</a></li>
+              </ul>
+            </div>
+            <div class="grid text-center content-center md:hidden lg:block">
+              <div>
+                <h4 class="text-white text-lg font-semibold">
+                  Contact Us</h4>
+                <p>Pakistan, Islamabad</p>
+                <p class=""><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+                <p><strong>Email:</strong> <span
+                    class="text-[#4cc9f0] cursor-pointer hover:text-[#389fbe] transition-all duration-200 ease">mr.st@agency.com</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Contact -->
+          <div class="hidden grid text-center content-center md:hidden lg:hidden">
+            <div>
+              <h4 class="text-white text-lg font-semibold">
+                Contact Us</h4>
+              <p>Pakistan Islamabad</p>
+              <p class=""><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+              <p><strong>Email:</strong> <span
+                  class="text-[#4cc9f0] cursor-pointer hover:text-[#389fbe] transition-all duration-200 ease">mr.st@agency.com</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class=" mt-10 pt-6 pb-6 text-center text-sm text-gray-400 bg-[#1a49572d] h-full">
+      © 2025 <span class="text-[#4cc9f0] font-bold">MR.ST</span>. All Rights Reserved.
+    </div>
+  </footer>
+
+  <script>
+    // navbar position
+
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add("bg-black/40", "backdrop-blur");
+      } else {
+        navbar.classList.remove("bg-black/40", "backdrop-blur");
+      }
+    });
+
+    // -----------------------------
+    // Dropdown toggle for Desktop & Mobile
+    // -----------------------------
+
+    // Close all dropdowns
+    function closeAllDropdowns() {
+      document.querySelectorAll("ul[id$='Menu']").forEach(menu => menu.classList.add("hidden"));
+      document.querySelectorAll("svg[id$='Icon']").forEach(icon => icon.style.transform = "rotate(0deg)");
+    }
+
+    // Desktop hover setup (only opens on hover, closes on click outside)
+    function setupHover(menuId, iconId, triggerId, parentMenuId = null) {
+      const trigger = document.getElementById(triggerId);
+      const menu = document.getElementById(menuId);
+      const icon = document.getElementById(iconId);
+      const parentMenu = parentMenuId ? document.getElementById(parentMenuId) : null;
+
+      function openMenu() {
+        if (!parentMenu) closeAllDropdowns(); // Close top-level others
+        menu.classList.remove("hidden");
+        icon.style.transform = "rotate(90deg)";
+      }
+
+      trigger.addEventListener("mouseenter", openMenu);
+      menu.addEventListener("mouseenter", openMenu);
+
+      // Only close on mouseleave from both trigger & menu
+      let leaveTimeout;
+      function delayedClose() {
+        leaveTimeout = setTimeout(() => {
+          if (!parentMenu) {
+            menu.classList.add("hidden");
+            icon.style.transform = "rotate(0deg)";
+          }
+        }, 200); // slight delay so accidental leave doesn't close immediately
+      }
+
+      trigger.addEventListener("mouseleave", delayedClose);
+      menu.addEventListener("mouseleave", delayedClose);
+
+      trigger.addEventListener("mouseenter", () => clearTimeout(leaveTimeout));
+      menu.addEventListener("mouseenter", () => clearTimeout(leaveTimeout));
+    }
+
+    // Mobile click toggle
+    function toggleDropdown(menuId, iconId, event) {
+      event.stopPropagation(); // prevent outer click
+      const menu = document.getElementById(menuId);
+      const icon = document.getElementById(iconId);
+
+      if (menu.classList.contains("hidden")) {
+        menu.classList.remove("hidden");
+        icon.style.transform = "rotate(90deg)";
+      } else {
+        menu.classList.add("hidden");
+        icon.style.transform = "rotate(0deg)";
+      }
+    }
+
+    // Close dropdowns if clicked outside (both mobile & desktop)
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest("li") && !e.target.closest("button")) {
+        closeAllDropdowns();
+      }
+    });
+
+    // Initialize desktop hover menus
+    window.onload = function () {
+      setupHover("servicesMenu", "servicesIcon", "servicesTrigger");
+      setupHover("teamMenu", "teamIcon", "teamTrigger");
+      setupHover("subTeamMenu", "subTeamIcon", "subTeamTrigger", "teamMenu"); // More Members
+    };
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById("menuBtn");
+    const menuIcon = document.getElementById("menuIcon");
+    const closeIcon = document.getElementById("closeIcon");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+
+      menuIcon.classList.toggle("opacity-0");
+      menuIcon.classList.toggle("rotate-90");
+
+      closeIcon.classList.toggle("opacity-0");
+      closeIcon.classList.toggle("rotate-0");
+    });
+
+    // up down arrow
+    const scrollBtn = document.getElementById("scrollBtn");
+    const scrollIcon = document.getElementById("scrollIcon");
+
+    function scrollToPosition(target) {
+      const start = window.scrollY;
+      const distance = target - start;
+      const duration = 200; // ms
+      let startTime = null;
+
+      function animation(currentTime) {
+        if (!startTime) startTime = currentTime;
+        const progress = Math.min((currentTime - startTime) / duration, 1);
+        window.scrollTo(0, start + distance * progress);
+        if (progress < 1) requestAnimationFrame(animation);
+      }
+
+      requestAnimationFrame(animation);
+    }
+
+    function updateButton() {
+      const scrollTop = window.scrollY;
+      const scrollHeight = document.documentElement.scrollHeight; // ✅ safe option
+      const clientHeight = window.innerHeight; // ✅ mobile safe
+
+      if (scrollTop + clientHeight >= scrollHeight - 5) {
+        // bottom reached → arrow up
+        scrollIcon.classList.remove("fa-arrow-down");
+        scrollIcon.classList.add("fa-arrow-up");
+        scrollBtn.onclick = () => scrollToPosition(0);
+      } else if (scrollTop <= 0) {
+        // top reached → arrow down
+        scrollIcon.classList.remove("fa-arrow-up");
+        scrollIcon.classList.add("fa-arrow-down");
+        scrollBtn.onclick = () => scrollToPosition(scrollHeight);
+      }
+    }
+
+    // 👇 mobile browsers ke liye scroll aur resize dono listen karo
+    window.addEventListener("scroll", updateButton);
+    window.addEventListener("resize", updateButton);
+    updateButton();
+
+    // User data fetch
+    let user = JSON.parse(localStorage.getItem("user"));
+    let miniDp = document.getElementById("miniDp");
+    let icon = document.getElementById("floatingUserIcon");
+
+    if (user && user.dp) {
+      miniDp.src = user.dp;
+    }
+
+    icon.addEventListener("click", function () {
+      if (user) {
+        if (user.loggedIn) {
+          window.location.href = "account.html";
+        } else {
+          window.location.href = "login.html";
+        }
+      } else {
+        window.location.href = "register.html";
+      }
+    });
+  </script>
+
+</body>
+
+</html>
