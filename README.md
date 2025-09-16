@@ -1,135 +1,110 @@
-x# 🌟 Zarbank – Modern Banking Website  
+# 🌟 Mr.St Agency Digital Solutions for the Future
 
-Welcome to **Zarbank**, a next-generation digital banking website built with **Tailwind CSS** and **JavaScript**. Zarbank is designed to combine **beauty, performance, and simplicity**. With its **professional UI/UX**, this project is perfect for fintech startups, personal portfolios, or anyone who wants to showcase a modern, banking-style web application.  
+Welcome to Mr.St Agency, a full-service creative digital agency built to deliver innovative solutions in branding, web development, and digital marketing.
+We combine creativity, technology, and strategy to help businesses grow, scale, and stand out online.
 
----
+## ✨ Highlights
 
-## ✨ Highlights  
-- 🎨 **Fully Responsive Design** – Mobile, tablet, and desktop optimized  
-- ⚡ **Lightning Fast Performance** – Thanks to Tailwind CSS utility-first styling  
-- 🖥️ **Interactive Components** – Dropdowns, navbar, modals, and more using JavaScript  
-- 🔐 **Banking-Inspired Layout** – Elegant, clean, and trustworthy UI  
-- 🌍 **Cross-Browser Compatibility** – Works smoothly everywhere  
-- 🚀 **Easy to Customize** – Tailwind classes make editing a breeze  
+- 🎨 Modern & Professional Design – Sleek, responsive, and pixel-perfect
 
----
-## 📸 Screenshots & Preview  
-> *"A digital banking design that looks real, feels premium, and inspires trust."*  
+- ⚡ High Performance Websites – Built with the latest tech stack
+
+- 🖥️ Full-Service Agency – Web development, branding, marketing, and more
+
+- 🤝 Client-Centric Approach – Solutions tailored for every business
+
+- 🌍 Cross-Industry Experience – From startups to global enterprises
+
+- 🚀 Scalable & Future-Ready – Designed to grow with your business
+
+## 📸 Screenshots & Preview
+
+> "A creative agency design that feels premium, inspires trust, and drives results."
 
 📷 **Homepage** – Hero section with call-to-action, navigation with dropdown and mobile hamburger menu, smooth gradients and professional typography.  
-![Homepage Screenshot](assets/homepage.png)  
+![Homepage Screenshot](assets/Mr.St%20Hero.PNG)  
 
-📷 **Services Section** – Banking products and services, cards styled with Tailwind utilities.  
-![Services Screenshot](assets/services.png)  
+📷 **Services Section** – Showcasing web development, branding, marketing, and consulting.  
+![Services Screenshot](assets/Mr.St%20Services.PNG) 
 
-📷 **Interactive Elements** – Hover effects, animated buttons, overlays.  
-![Interactive Screenshot](assets/Team.png)  
----
+📷 **Our Work** – Elegant cards, hover effects, and professional visuals.
+![Work Screenshort](assets/Mr.St%20Work.PNG)
 
-## 🛠️ Tech Stack  
-- **HTML5** – Semantic and clean structure  
-- **Tailwind CSS** – For stunning responsive design  
-- **JavaScript (ES6)** – To add interactivity  
-- **FontAwesome Icons** – For professional visuals  
 
----
+## 🛠️ Tech Stack
 
-## 🚀 Getting Started  
+- HTML5 & CSS3 (Tailwind CSS) – Modern responsive UI
 
-Follow these simple steps to run **Zarbank** locally:  
+- JavaScript (ES6) – Interactive components
 
-### 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/YourUsername/Zarbank.git
-cd Zarbank
-```
+- FontAwesome Icons – Professional visuals
+
+- Optimized Assets – Fast loading speed
+
+## 🚀 Getting Started
+
+Follow these steps to run Mr.St Agency Website locally:
+
+## 1️⃣ Clone the Repository
+git clone https://github.com/SilentProgrammer-max/mrst-website.git
+cd MrSt-Agency
+
 ## 2️⃣ Open the Project
 
 Simply open the index.html file in your favorite browser. 🌐
 
 ## 3️⃣ (Optional) Run with Live Server
 
-For smoother development, use VS Code with the Live Server extension.
-
-## Setup Tailwind
-
-### 1️⃣ NPM init (agar package.json nahi hai to)
-`npm init -y`
-
-### 2️⃣ TailwindCSS aur PostCSS install karo
-`npm install -D tailwindcss postcss autoprefixer`
-
-### 3️⃣ Tailwind config aur PostCSS config generate karo
-`npx tailwindcss init -p`
-
-### 4️⃣ Tailwind directives apni CSS file me add karo (css/input.css)
+For smooth development, use VS Code with the Live Server extension.
 ```
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
-### 5️⃣ Build script package.json me add karo
-```
-"scripts": {
-  "build": "tailwindcss -i ./css/input.css -o ./css/output.css --watch"
-}
-```
-### 6️⃣ Build run karo (ye output.css generate karega)
-
-`npm run build`
-
-
-## 📂 Project Structure
-```
-Zarbank/
+📂 Project Structure
+MrSt-Agency/
 │── assets/               # Images, icons, and static files
 │── css/
-│   │── input.css         # Your main Tailwind input file
-│   │── output.css        # Compiled Tailwind CSS file
+│   │── input.css         # Tailwind input file
+│   │── output.css        # Compiled CSS
 │
 │── js/                   # JavaScript functions
 │   │── main.js
 │
 │── index.html            # Main entry point
-│── package.json          # Project dependencies & scripts
-│── tailwind.config.js    # Tailwind configuration file
-│── postcss.config.js     # PostCSS configuration
-│── .gitignore            # Ignore node_modules and build files
+│── package.json          # Dependencies & scripts
+│── tailwind.config.js    # Tailwind config
+│── postcss.config.js     # PostCSS config
+│── .gitignore            # Ignore node_modules
 │
-└── node_modules/         # Auto-generated by npm (NOT pushed to repo)
+└── node_modules/         # Auto-generated by npm
 ```
-## 🌟 Why Choose Zarbank?
+## 🌟 Why Choose Mr.St Agency?
 
-- 🏦 Real Banking Vibes – Built to look like a professional digital bank
+- 🏆 Creative Excellence – Unique branding & stunning designs
 
-- 💼 Portfolio Ready – Impress recruiters, clients, and showcase your frontend skills
+- 💼 Business-Focused – We craft solutions that drive real results
 
-- 📱 User-Centric – Every detail crafted for the best user experience
+- 📱 Digital Growth Experts – From websites to marketing campaigns
 
-- 🧩 Modular & Extendable – Add new sections or features easily
+- 🧩 Flexible & Scalable – Perfect for startups and enterprises alike
 
-> Zarbank is not just a design – it’s a concept for the future of fintech ✨
+> Mr.St Agency is not just a design – it’s a growth partner for your business ✨
 
 ## 🔥 Future Enhancements
 
 - 🌐 Multi-language support (EN/FR/AR)
 
-- 💳 Interactive transaction dashboard
+- 📊 Analytics dashboard integration
 
-- 📊 Analytics & charts integration
-
-- 👤 User login & profile mockup
+- 👤 Client login & project tracking
 
 - 🌙 Dark mode toggle
 
 ## 🤝 Contributing
 
-We ❤️ contributions! If you’d like to improve Zarbank, fork the repo and submit a pull request. Ideas, suggestions, and improvements are always welcome!
+We ❤️ collaborations! Want to improve Mr.St Agency? Fork the repo and submit a pull request. Ideas, suggestions, and contributions are always welcome!
 
 ## 📜 License
 
 This project is licensed under the MIT License – free to use, modify, and share.
 
-> 💳 Zarbank – Banking Reimagined with Elegance
+> 💼 Mr.St Agency – Creativity Meets Technology
 
-A modern banking prototype built with 💖 by AyeshaTechX.
+A modern agency prototype built with 💖 by AyeshaTechX.
