@@ -8,6 +8,8 @@
   <link rel="icon" href="assets/logo.PNG" class="h-5">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <title>Service Details</title>
 </head>
 
@@ -27,16 +29,18 @@
 
     <!-- Navbar -->
     <div id="navbar"
-      class="w-full py-3 flex items-center justify-between relative z-20 sm:justify-between px-5 lg:px-10 2xl:px-10 sticky top-0 bg-transparent transition-all duration-300">
+      class="w-full py-3 flex items-center justify-between relative z-20 sm:justify-between px-5 lg:px-10 2xl:px-20 sticky top-0 bg-transparent transition-all duration-300"
+      data-aos="fade-down" data-aos-duration="1000">
 
       <!-- Left Logo -->
-      <div class="flex">
+      <div class="flex" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
         <img src="assets/logo.PNG" alt="Mr.St Logo" class="lg:h-14  h-14 ml-0 ">
         <span class="text-4xl font-bold -ml-3 mt-3 text-white">.ST</span>
       </div>
 
       <!-- Hamburger Icon (Mobile) -->
-      <button id="menuBtn" class="sm:block md:block lg:hidden relative w-7 h-7 ml-auto">
+      <button id="menuBtn" class="sm:block md:block lg:hidden relative w-7 h-7 ml-auto" data-aos="fade-left"
+        data-aos-duration="1000" data-aos-delay="150">
         <!-- Hamburger -->
         <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
           class="absolute top-0 left-0 w-7 h-7 text-white transition-all duration-[300ms] ease">
@@ -50,7 +54,8 @@
       </button>
 
       <!-- Desktop Menu -->
-      <nav class="hidden lg:flex gap-6 items-center text-white">
+      <nav class="hidden lg:flex gap-6 items-center text-white" data-aos="fade-up" data-aos-duration="1000"
+        data-aos-delay="200">
         <ul class="flex gap-6 items-center text-white">
 
           <li><a href="index.html#home"
@@ -61,7 +66,7 @@
           </li>
 
           <!-- Services -->
-          <li class="relative" id="servicesTrigger">
+          <li class="relative" id="servicesTrigger" data-aos="fade-down" data-aos-delay="250">
             <a href="javascript:void(0)"
               class="flex items-center gap-1 nav-link hover:text-[#4cc9f0] transition-all duration-[100ms] ease">
               Services
@@ -83,7 +88,7 @@
           </li>
 
           <!-- Team -->
-          <li class="relative" id="teamTrigger">
+          <li class="relative" id="teamTrigger" data-aos="fade-down" data-aos-delay="300">
             <a href="javascript:void(0)"
               class="flex items-center gap-1 nav-link hover:text-[#4cc9f0] transition-all duration-[100ms] ease">
               Team
@@ -129,17 +134,20 @@
       </nav>
 
       <!-- Desktop Button -->
-      <a href="register.html" class="hidden lg:block">
+      <a href="register.html" class="hidden lg:block" data-aos="fade-left" data-aos-delay="350">
         <button
           class="hidden lg:block text-white bg-gradient-to-br from-[#4cc9f0] via-[#4cc9f0] to-[#4cc9f0] hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-[#4cc9f0] dark:focus:ring-[#4cc9f0] font-medium rounded-full py-2 px-5 text-center cursor-pointer whitespace-nowrap transition hover:translate-y-0.5 duration-[200ms]  shadow-[0_0_25px_#33997a6e]">Click
           Now</button>
       </a>
     </div>
 
+
     <!-- Mobile Menu -->
     <div id="mobileMenu"
-      class="lg:hidden hidden px-4 py-4 border border-transparent z-100 relative flex flex-col bg-black/60 backdrop-blur text-white justify-between">
-      <div class="">
+      class="lg:hidden hidden px-4 py-4 border border-transparent z-100 relative flex flex-col bg-black/60 backdrop-blur text-white justify-between"
+      data-aos="fade-down" data-aos-duration="1000">
+
+      <div class="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
         <ul class="space-y-3">
 
           <li><a href="#home"
@@ -150,7 +158,7 @@
           </li>
 
           <!-- Services (Mobile Dropdown) -->
-          <li>
+          <li data-aos="fade-right" data-aos-delay="150">
             <button onclick="toggleDropdown('servicesMenuMobile','servicesIconMobile', event)"
               class="nav-link flex items-center gap-1 cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">
               Services
@@ -184,7 +192,7 @@
           </li>
 
           <!-- Team (Mobile Dropdown) -->
-          <li>
+          <li data-aos="fade-left" data-aos-delay="200">
             <button onclick="toggleDropdown('loansMenuMobile','loansIconMobile' ,event)"
               class="nav-link flex items-center gap-1 cursor-pointer hover:text-[#4cc9f0] transition-all duration-[200ms] ease">
               Team
@@ -211,8 +219,9 @@
           </li>
         </ul>
       </div>
+
       <!-- Center Button (Mobile) -->
-      <div>
+      <div data-aos="fade-up" data-aos-delay="250">
         <a href="register.html">
           <button type="button" class="text-white bg-gradient-to-r from-[#4cc9f0] via-[#4cc9f0] to-[#4cc9f0] hover:bg-gradient-to-br focus:ring-2 focus:outline-none focus:ring-[#12a16acb] dark:focus:ring-[#4cc9f0]
  font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 cursor-pointer whitespace-nowrap w-full mt-5"
@@ -223,32 +232,35 @@
 
     </div>
 
+
     <!-- Banner Text -->
     <div
-      class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 sm:px-10 z-0 lg:mt-7 mt-10">
-      <h1 class="md:text-5xl font-bold mb-3 text-3xl">Service Details</h1>
-      <p class="text-lg sm:text-xl mb-4 max-w-2xl">
+      class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 sm:px-10 z-0 lg:mt-7 mt-10"
+      data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+      <h1 class="md:text-5xl font-bold mb-3 text-3xl" data-aos="fade-down" data-aos-duration="1000">Service Details</h1>
+      <p class="text-lg sm:text-xl mb-4 max-w-2xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
         Grow your business, manage clients, boost digital presence, and access top-notch solutions with our full-service
         agency expertise.
       </p>
-      <div class="flex">
+      <div class="flex" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
         <a href="index.html" class="text-[#4cc9f0] hover:text-[#3c99b6] transition-all duration-200 ease-in">Home</a>
         <span> <span class="text-gray-400">&nbsp;/</span> Service Details</span>
       </div>
     </div>
+
   </div>
 
 
 
   <!-- Service Details Section -->
-  <section id="service-details" class="py-16">
+  <section id="service-details" class="py-16" data-aos="fade-up" data-aos-duration="1000">
     <div class="container mx-auto px-4 sm:px-10 xl:px-20 grid lg:grid-cols-12 gap-8">
 
       <!-- Left Content -->
       <div class="lg:col-span-8 space-y-8">
 
         <!-- Hero Image -->
-        <div class="relative">
+        <div class="relative" data-aos="fade-right" data-aos-duration="1000">
           <img src="assets/service.webp" alt="Agency Service" class="w-full rounded-2xl shadow-lg">
           <div class="absolute top-4 left-4 bg-[#4cc9f0] text-white px-4 py-2 rounded-full text-sm font-semibold">
             Premium Service
@@ -256,7 +268,7 @@
         </div>
 
         <!-- Service Header -->
-        <div>
+        <div data-aos="fade-left" data-aos-duration="1000">
           <h2 class="text-3xl font-bold text-white mb-2 2xl:text-4xl">Full-Service Agency Solutions</h2>
           <p class="text-gray-300 2xl:text-xl">
             Grow your brand, manage clients, launch campaigns, and access a complete suite of professional services with
@@ -264,14 +276,14 @@
           </p>
         </div>
 
-
         <!-- Features -->
-        <div>
+        <div data-aos="fade-up" data-aos-duration="1000">
           <h4 class="text-xl font-semibold mb-4 2xl:text-2xl text-white">What You'll Get</h4>
           <div class="grid md:grid-cols-2 gap-6">
 
             <div
-              class="flex space-x-4 border-2 bg-[#242424] border-gray-800 hover:shadow-2xl hover:shadow-[#0f181b] p-3 rounded-xl hover:-translate-y-0.5 transition-all duration-[200ms] ease-in">
+              class="flex space-x-4 border-2 bg-[#242424] border-gray-800 hover:shadow-2xl hover:shadow-[#0f181b] p-3 rounded-xl hover:-translate-y-0.5 transition-all duration-[200ms] ease-in"
+              data-aos="fade-up" data-aos-delay="100">
               <div class="text-[#4cc9f0] text-3xl text-center bg-[#3e4646] rounded-full px-4 py-1 content-center">
                 <i class="fa-solid fa-briefcase"></i>
               </div>
@@ -282,7 +294,8 @@
             </div>
 
             <div
-              class="flex space-x-4 border-2 bg-[#242424] border-gray-800 hover:shadow-2xl hover:shadow-[#0f181b] p-3 rounded-xl hover:-translate-y-0.5 transition-all duration-[200ms] ease-in">
+              class="flex space-x-4 border-2 bg-[#242424] border-gray-800 hover:shadow-2xl hover:shadow-[#0f181b] p-3 rounded-xl hover:-translate-y-0.5 transition-all duration-[200ms] ease-in"
+              data-aos="fade-up" data-aos-delay="150">
               <div class="text-[#4cc9f0] text-3xl text-center bg-[#3e4646] rounded-full px-4 py-1 content-center">
                 <i class="fa-solid fa-bullhorn"></i>
               </div>
@@ -294,7 +307,8 @@
             </div>
 
             <div
-              class="flex space-x-4 border-2 bg-[#242424] border-gray-800 hover:shadow-2xl hover:shadow-[#0f181b] p-3 rounded-xl hover:-translate-y-0.5 transition-all duration-[200ms] ease-in">
+              class="flex space-x-4 border-2 bg-[#242424] border-gray-800 hover:shadow-2xl hover:shadow-[#0f181b] p-3 rounded-xl hover:-translate-y-0.5 transition-all duration-[200ms] ease-in"
+              data-aos="fade-up" data-aos-delay="200">
               <div class="text-[#4cc9f0] text-3xl text-center bg-[#3e4646] rounded-full px-4 py-1 content-center">
                 <i class="fa-solid fa-users"></i>
               </div>
@@ -306,7 +320,8 @@
             </div>
 
             <div
-              class="flex space-x-4 border-2 bg-[#242424] border-gray-800 hover:shadow-2xl hover:shadow-[#0f181b] p-3 rounded-xl hover:-translate-y-0.5 transition-all duration-[200ms] ease-in">
+              class="flex space-x-4 border-2 bg-[#242424] border-gray-800 hover:shadow-2xl hover:shadow-[#0f181b] p-3 rounded-xl hover:-translate-y-0.5 transition-all duration-[200ms] ease-in"
+              data-aos="fade-up" data-aos-delay="250">
               <div class="text-[#4cc9f0] text-3xl text-center bg-[#3e4646] rounded-full px-4 py-1 content-center">
                 <i class="fa-solid fa-lightbulb"></i>
               </div>
@@ -320,16 +335,15 @@
           </div>
         </div>
 
-
         <!-- Process Steps -->
-        <div class="relative">
+        <div class="relative" data-aos="fade-up" data-aos-duration="1000">
           <h4 class="text-xl font-semibold mb-4 2xl:text-2xl text-white">Our Process</h4>
           <div class="space-y-6 relative">
 
             <!-- Vertical Line -->
             <div class="absolute top-5 bottom-0 left-5 w-[2px] bg-[#4cc9f0]"></div>
 
-            <div class="flex space-x-4 relative z-10">
+            <div class="flex space-x-4 relative z-10" data-aos="fade-right" data-aos-delay="100">
               <div
                 class="flex-shrink-0 bg-[#4cc9f0] text-white w-10 h-10 flex items-center justify-center rounded-full font-bold">
                 01</div>
@@ -340,7 +354,7 @@
               </div>
             </div>
 
-            <div class="flex space-x-4 relative z-10">
+            <div class="flex space-x-4 relative z-10" data-aos="fade-right" data-aos-delay="150">
               <div
                 class="flex-shrink-0 bg-[#4cc9f0] text-white w-10 h-10 flex items-center justify-center rounded-full font-bold">
                 02</div>
@@ -351,7 +365,7 @@
               </div>
             </div>
 
-            <div class="flex space-x-4 relative z-10">
+            <div class="flex space-x-4 relative z-10" data-aos="fade-right" data-aos-delay="200">
               <div
                 class="flex-shrink-0 bg-[#4cc9f0] text-white w-10 h-10 flex items-center justify-center rounded-full font-bold">
                 03</div>
@@ -362,7 +376,7 @@
               </div>
             </div>
 
-            <div class="flex space-x-4 relative z-10">
+            <div class="flex space-x-4 relative z-10" data-aos="fade-right" data-aos-delay="250">
               <div
                 class="flex-shrink-0 bg-[#4cc9f0] text-white w-10 h-10 flex items-center justify-center rounded-full font-bold">
                 04</div>
@@ -376,10 +390,8 @@
           </div>
         </div>
 
-
-
         <!-- Gallery -->
-        <div>
+        <div data-aos="fade-up" data-aos-duration="1000">
           <h4 class="text-xl font-semibold mb-4 text-white">Project Showcase</h4>
           <div class="grid md:grid-cols-2 gap-4">
             <img src="assets/saving.jpg" alt="" class="w-full h-64 object-cover rounded-lg shadow-md">
@@ -389,14 +401,14 @@
           </div>
         </div>
 
-
       </div>
 
       <!-- Right Sidebar -->
-      <div class="lg:col-span-4 space-y-8">
+      <div class="lg:col-span-4 space-y-8" data-aos="fade-left" data-aos-duration="1000">
 
         <!-- Services Menu -->
-        <div class="bg-[#242424] rounded-2xl border-1 border-gray-700 border p-6 space-y-4">
+        <div class="bg-[#242424] rounded-2xl border-1 border-gray-700 border p-6 space-y-4" data-aos="fade-up"
+          data-aos-delay="100">
           <h4 class="font-semibold text-white 2xl:text-xl">Our Services</h4>
           <div class="space-y-2">
             <a href="#"
@@ -432,7 +444,8 @@
         </div>
 
         <!-- Info Card -->
-        <div class="bg-[#242424] rounded-2xl border-1 border-gray-700 border p-6 space-y-4">
+        <div class="bg-[#242424] rounded-2xl border-1 border-gray-700 border p-6 space-y-4" data-aos="fade-up"
+          data-aos-delay="150">
           <h4 class="font-semibold text-white 2xl:text-xl">Service Details</h4>
           <div class="space-y-2">
             <div class="flex justify-between">
@@ -458,7 +471,7 @@
         </div>
 
         <!-- Contact Card -->
-        <div class="bg-[#3ba0be] rounded-2xl shadow-lg p-6 space-y-4">
+        <div class="bg-[#3ba0be] rounded-2xl shadow-lg p-6 space-y-4" data-aos="fade-up" data-aos-delay="200">
           <h4 class="font-semibold text-white 2xl:text-xl">Need Help?</h4>
           <p class="text-white">Contact our banking experts anytime for assistance with accounts, loans, or deposits.
           </p>
@@ -482,13 +495,14 @@
     </div>
   </section>
 
-  <footer class="bg-black text-gray-300 pt-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-10 lg:px-20 2xl:px-0 ">
+
+  <footer class="bg-black text-gray-300 pt-12" data-aos="fade-up" data-aos-duration="1000">
+    <div class="max-w-7xl mx-auto px-4 sm:px-10 lg:px-20 2xl:px-0" data-aos="fade-down" data-aos-duration="1000">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-10 ">
 
 
         <!-- About Section -->
-        <div class="">
+        <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
           <div class="flex -ml-3">
             <img src="assets/logo.PNG" alt="Mr.St Logo" class="lg:h-14  h-14 ">
             <span class="text-4xl font-bold -ml-3 mt-3 text-white">.ST</span>
@@ -498,7 +512,7 @@
             with the latest trends, campaigns, and insights to elevate your brand's impact.
           </p>
 
-          <div class="flex space-x-4 mt-4">
+          <div class="flex space-x-4 mt-4" data-aos="fade-up" data-aos-delay="150">
             <a href="#"
               class="hover:text-[#4cc9f0] border-[1px] border-gray-200 hover:border-[#4cc9f0] rounded-full px-2 py-1 transition-all duration-[200px] ease-in -mr-0.5"><i
                 class="fa-brands fa-twitter"></i></a>
@@ -513,9 +527,10 @@
                 class="fa-brands fa-linkedin"></i></a>
           </div>
         </div>
-        <div class="sm:flex sm:gap-14 grid sm:space-y-0 space-y-5 md:grid md:grid-cols-2 lg:flex lg:gap-30 xl:gap-36">
+        <div class="sm:flex sm:gap-14 grid sm:space-y-0 space-y-5 md:grid md:grid-cols-2 lg:flex lg:gap-30 xl:gap-36"
+          data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
           <!-- Useful Links -->
-          <div class="sm:none text-center lg:text-left">
+          <div class="sm:none text-center lg:text-left" data-aos="fade-up" data-aos-delay="250">
             <h4 class="text-white text-lg font-semibold mb-4 border-l-[3px] border-[#4cc9f0] pl-2">
               Useful Links</h4>
             <ul class="space-y-2">
@@ -533,7 +548,7 @@
           </div>
 
           <!-- Services -->
-          <div class="lg:flex lg:gap-28 xl:gap-32">
+          <div class="lg:flex lg:gap-28 xl:gap-32" data-aos="fade-up" data-aos-delay="300">
             <div class="sm:none text-center">
               <h4 class="text-white text-lg font-semibold mb-4 border-l-[3px] border-[#4cc9f0] pl-2">
                 Our
@@ -554,7 +569,7 @@
                     class="hover:text-[#4cc9f0] transition-all duration-[200px] ease-in">Video Editing</a></li>
               </ul>
             </div>
-            <div class="grid text-center content-center md:hidden lg:block">
+            <div class="grid text-center content-center md:hidden lg:block" data-aos="fade-up" data-aos-delay="350">
               <div>
                 <h4 class="text-white text-lg font-semibold">
                   Contact Us</h4>
@@ -589,6 +604,8 @@
       © 2025 <span class="text-[#4cc9f0] font-bold">MR.ST</span>. All Rights Reserved.
     </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
   <script>
     // navbar position
@@ -756,7 +773,17 @@
       }
     });
   </script>
-
+  <script>
+    // AOS JS
+    AOS.init({
+      duration: 800,          // animation duration
+      easing: 'ease-in-out',  // smooth easing
+      once: true,             // animate only once
+      mirror: false,          // do not animate on scroll up
+      disableMutationObserver: false, // ensures dynamically visible elements show
+      startEvent: 'DOMContentLoaded'  // start AOS after DOM is ready
+    });
+  </script>
 </body>
 
 </html>
