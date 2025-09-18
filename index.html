@@ -20,6 +20,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body class="bg-[#111111] text-black transition-colors duration-500">
@@ -2267,6 +2269,18 @@ transform transition-transform duration-500 group-hover:scale-105 group-hover:ro
         </footer>
 
         <script src="script.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // AOS JS
+        AOS.init({
+            duration: 800,          // animation duration
+            easing: 'ease-in-out',  // smooth easing
+            once: true,             // animate only once
+            mirror: false,          // do not animate on scroll up
+            disableMutationObserver: false, // ensures dynamically visible elements show
+            startEvent: 'DOMContentLoaded'  // start AOS after DOM is ready
+        });
+    </script>
 </body>
 
 </html>
