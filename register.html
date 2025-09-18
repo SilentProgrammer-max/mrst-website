@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +13,15 @@
   <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <title>Sign Up</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .diagonal {
       clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
     }
-
+    
     @media (max-width: 768px) {
       .diagonal {
         clip-path: none;
@@ -37,54 +38,46 @@
     <div class="absolute inset-0 bg-black/80"></div>
   </div>
 
-  <!-- Register Form Container -->
-  <div class="relative z-10 w-full max-w-4xl flex flex-col md:flex-row overflow-hidden rounded-2xl shadow-2xl">
+<!-- Register Form Container -->
+<div class="relative z-10 w-full max-w-4xl flex flex-col md:flex-row overflow-hidden rounded-2xl shadow-2xl" data-aos="fade-up" data-aos-duration="1000">
 
-    <!-- Left Form Section -->
-    <div class="w-full md:w-1/2 p-8 md:p-12 bg-[#202122] backdrop-blur-md diagonal flex flex-col justify-center">
-      <h2 class="text-3xl font-bold mb-6 text-[#4cc9f0] text-center md:text-left">Sign Up</h2>
-      <form id="registerForm" class="flex flex-col gap-4">
-        <input type="text" id="fullname" placeholder="Full Name" required
-          class="w-full px-4 py-3 rounded-md border border-gray-800 bg-white/5 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#4cc9f0]">
-        <input type="text" id="username" placeholder="Username" required
-          class="w-full px-4 py-3 rounded-md border border-gray-800 bg-white/5 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#4cc9f0]">
-        <input type="email" id="email" placeholder="Email" required
-          class="w-full px-4 py-3 rounded-md border border-gray-800 bg-white/5 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#4cc9f0]">
-        <input type="password" id="password" placeholder="Password" required
-          class="w-full px-4 py-3 rounded-md border border-gray-800 bg-white/5 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#4cc9f0]">
-        <input type="password" id="repassword" placeholder="Retype Password" required
-          class="w-full px-4 py-3 rounded-md border border-gray-800 bg-white/5 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#4cc9f0]">
-        <input type="number" id="age" placeholder="Age" required
-          class="w-full px-4 py-3 rounded-md border border-gray-800 bg-white/5 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#4cc9f0]">
-        <select id="gender" required
-          class="w-full px-4 py-3 rounded-md border border-gray-800 bg-white/5 text-white placeholder-black0 focus:outline-none focus:ring-2 focus:ring-[#4cc9f0]">
-          <option value="" class="text-gray-300">Select Gender</option>
-          <option class="text-black">Male</option>
-          <option class="text-black">Female</option>
-        </select>
-        <button type="submit"
-          class="bg-[#4cc9f0] hover:bg-[#378faa] text-white font-semibold py-3 rounded-full mt-4 shadow-[#96e6ff34] shadow-xl hover:-translate-y-0.5 transition-all duration-[300ms] ease-in">Register</button>
-      </form>
-      <p class="text-gray-400 mt-4 text-sm text-center md:text-left">Already have an account?
-        <a href="login.html" class="text-[#4cc9f0] hover:underline">Login</a>
-      </p>
-    </div>
-
-    <!-- Right Welcome Section -->
-    <div class="hidden md:flex md:w-1/2 bg-gray-700/5 backdrop-blur-sm items-center justify-center p-12">
-      <div class="text-white text-center">
-        <div class="flex justify-center text-center content-center mb-5">
-          <h2 class="text-3xl font-bold">WELCOME TO</h2>
-          <div class="flex -mt-3">
-            <img src="assets/logo.PNG" alt="Mr.St Logo" class="lg:h-14  h-14 ml-0 ">
-            <span class="text-4xl font-bold -ml-3 mt-3 text-white">.ST</span>
-          </div>
-        </div>
-        <p class="text-white/90">Join us and start your journey. Fill the form to create your account.</p>
-      </div>
-    </div>
-
+  <!-- Left Form Section -->
+  <div class="w-full md:w-1/2 p-8 md:p-12 bg-[#202122] backdrop-blur-md diagonal flex flex-col justify-center" data-aos="fade-right" data-aos-duration="1000">
+    <h2 class="text-3xl font-bold mb-6 text-[#4cc9f0] text-center md:text-left">Sign Up</h2>
+    <form id="registerForm" class="flex flex-col gap-4">
+      <input type="text" id="fullname" placeholder="Full Name" required class="w-full px-4 py-3 rounded-md border border-gray-800 bg-white/5 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#4cc9f0]">
+      <input type="text" id="username" placeholder="Username" required class="w-full px-4 py-3 rounded-md border border-gray-800 bg-white/5 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#4cc9f0]">
+      <input type="email" id="email" placeholder="Email" required class="w-full px-4 py-3 rounded-md border border-gray-800 bg-white/5 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#4cc9f0]">
+      <input type="password" id="password" placeholder="Password" required class="w-full px-4 py-3 rounded-md border border-gray-800 bg-white/5 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#4cc9f0]">
+      <input type="password" id="repassword" placeholder="Retype Password" required class="w-full px-4 py-3 rounded-md border border-gray-800 bg-white/5 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#4cc9f0]">
+      <input type="number" id="age" placeholder="Age" required class="w-full px-4 py-3 rounded-md border border-gray-800 bg-white/5 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#4cc9f0]">
+      <select id="gender" required class="w-full px-4 py-3 rounded-md border border-gray-800 bg-white/5 text-white placeholder-black0 focus:outline-none focus:ring-2 focus:ring-[#4cc9f0]">
+        <option value="" class="text-gray-300">Select Gender</option>
+        <option class="text-black">Male</option>
+        <option class="text-black">Female</option>
+      </select>
+      <button type="submit" class="bg-[#4cc9f0] hover:bg-[#378faa] text-white font-semibold py-3 rounded-full mt-4 shadow-[#96e6ff34] shadow-xl hover:-translate-y-0.5 transition-all duration-[300ms] ease-in">Register</button>
+    </form>
+    <p class="text-gray-400 mt-4 text-sm text-center md:text-left">Already have an account?
+      <a href="login.html" class="text-[#4cc9f0] hover:underline">Login</a>
+    </p>
   </div>
+
+  <!-- Right Welcome Section -->
+  <div class="hidden md:flex md:w-1/2 bg-gray-700/5 backdrop-blur-sm items-center justify-center p-12" data-aos="fade-left" data-aos-duration="1000">
+    <div class="text-white text-center">
+      <div class="flex justify-center text-center content-center mb-5">
+        <h2 class="text-3xl font-bold">WELCOME TO</h2>
+        <div class="flex -mt-3">
+          <img src="assets/logo.PNG" alt="Mr.St Logo" class="lg:h-14  h-14 ml-0 ">
+          <span class="text-4xl font-bold -ml-3 mt-3 text-white">.ST</span>
+        </div>
+      </div>
+      <p class="text-white/90">Join us and start your journey. Fill the form to create your account.</p>
+    </div>
+  </div>
+
+</div>
 
   <script>
     // Register functionality using localStorage
@@ -118,7 +111,18 @@
     });
 
   </script>
-
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+                  // AOS JS
+        AOS.init({
+            duration: 800,          // animation duration
+            easing: 'ease-in-out',  // smooth easing
+            once: true,             // animate only once
+            mirror: false,          // do not animate on scroll up
+            disableMutationObserver: false, // ensures dynamically visible elements show
+            startEvent: 'DOMContentLoaded'  // start AOS after DOM is ready
+        });
+  </script>
 </body>
 
 </html>
