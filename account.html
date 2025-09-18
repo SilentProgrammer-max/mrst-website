@@ -20,6 +20,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+              <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body class="bg-gray-100 min-h-screen flex flex-col items-center justify-start py-10 relative">
@@ -30,44 +32,45 @@
     <div class="absolute inset-0 bg-black/80"></div> <!-- Dark overlay with low opacity -->
   </div>
 
-  <!-- User Account Card -->
-  <div
-    class="bg-gray-700/5 backdrop-blur-sm rounded-2xl shadow-2xl shadow-[#0f0f0f] p-6 w-full max-w-md flex flex-col items-center relative z-10">
+<!-- User Account Card -->
+<div
+  class="bg-gray-700/5 backdrop-blur-sm rounded-2xl shadow-2xl shadow-[#0f0f0f] p-6 w-full max-w-md flex flex-col items-center relative z-10"
+  data-aos="fade-up" data-aos-duration="1000">
 
-    <!-- Profile Display -->
-    <div id="profileDpContainer" class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-[#4cc9f0]">
-      <img id="currentDp" src="assets/user.jpg" alt="Profile Picture" class="w-full h-full object-cover">
-    </div>
-
-    <!-- User Name -->
-    <h2 id="userName" class="text-xl font-semibold mb-4 text-white">User Name</h2>
-
-    <!-- File Upload Section -->
-    <div class="mb-0 w-full flex flex-col items-center">
-      <!-- Hidden input -->
-      <input type="file" id="uploadDp" class="hidden">
-
-      <!-- Custom button -->
-      <label for="uploadDp"
-        class="cursor-pointer bg-gradient-to-br from-[#4cc9f0] via-[#4cc9f0] to-[#4cc9f0] hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-[#4cc9f0] dark:focus:ring-[#4cc9f0] font-medium rounded-full py-2 px-5 text-center cursor-pointer whitespace-nowrap transition hover:translate-y-1 duration-[200ms] shadow-2xl shadow-[#4cc9f0]">
-        Change Profile Picture
-      </label>
-
-      <!-- Selected file name -->
-      <p id="fileName" class="mt-2 text-sm text-gray-500"></p>
-    </div>
-
-    <!-- Logout / Web Button -->
-    <div class="flex gap-4 mt-6">
-      <button id="logoutBtn"
-        class="bg-[#4cc9f0] hover:bg-[#32829b] text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-200">
-        Logout
-      </button>
-      <button id="webBtn"
-        class="bg-white hover:bg-gray-200 text-[#4cc9f0] font-semibold py-2 px-4 rounded-lg shadow-md transition duration-200"><a href="index.html">Go to Web</a>
-      </button>
-    </div>
+  <!-- Profile Display -->
+  <div id="profileDpContainer" class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-[#4cc9f0]" data-aos="zoom-in" data-aos-duration="1000">
+    <img id="currentDp" src="assets/user.jpg" alt="Profile Picture" class="w-full h-full object-cover">
   </div>
+
+  <!-- User Name -->
+  <h2 id="userName" class="text-xl font-semibold mb-4 text-white" data-aos="fade-right" data-aos-duration="1000">User Name</h2>
+
+  <!-- File Upload Section -->
+  <div class="mb-0 w-full flex flex-col items-center" data-aos="fade-left" data-aos-duration="1000">
+    <!-- Hidden input -->
+    <input type="file" id="uploadDp" class="hidden">
+
+    <!-- Custom button -->
+    <label for="uploadDp"
+      class="cursor-pointer bg-gradient-to-br from-[#4cc9f0] via-[#4cc9f0] to-[#4cc9f0] hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-[#4cc9f0] dark:focus:ring-[#4cc9f0] font-medium rounded-full py-2 px-5 text-center cursor-pointer whitespace-nowrap transition hover:translate-y-1 duration-[200ms] shadow-2xl shadow-[#4cc9f0]">
+      Change Profile Picture
+    </label>
+
+    <!-- Selected file name -->
+    <p id="fileName" class="mt-2 text-sm text-gray-500"></p>
+  </div>
+
+  <!-- Logout / Web Button -->
+  <div class="flex gap-4 mt-6" data-aos="fade-up" data-aos-duration="1000">
+    <button id="logoutBtn"
+      class="bg-[#4cc9f0] hover:bg-[#32829b] text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-200">
+      Logout
+    </button>
+    <button id="webBtn"
+      class="bg-white hover:bg-gray-200 text-[#4cc9f0] font-semibold py-2 px-4 rounded-lg shadow-md transition duration-200"><a href="index.html">Go to Web</a>
+    </button>
+  </div>
+</div>
 
 <script>
 
@@ -225,8 +228,20 @@ document.addEventListener("DOMContentLoaded", function () {
         setupHover("subTeamMenu", "subTeamIcon", "subTeamTrigger", "teamMenu");
     };
 });
-
 </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+                  // AOS JS
+        AOS.init({
+            duration: 800,          // animation duration
+            easing: 'ease-in-out',  // smooth easing
+            once: true,             // animate only once
+            mirror: false,          // do not animate on scroll up
+            disableMutationObserver: false, // ensures dynamically visible elements show
+            startEvent: 'DOMContentLoaded'  // start AOS after DOM is ready
+        });
+  </script>
 </body>
 
 </html>
